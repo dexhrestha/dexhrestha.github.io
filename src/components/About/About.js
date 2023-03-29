@@ -28,7 +28,7 @@ const About = () => {
 
         {social && (
           <>
-            {social.github && (
+            {/* {social.github && (
               <a
                 href={social.github}
                 aria-label='github'
@@ -36,7 +36,7 @@ const About = () => {
               >
                 <GitHubIcon />
               </a>
-            )}
+            )} */}
 
             {social.linkedin && (
               <a

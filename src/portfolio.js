@@ -10,7 +10,7 @@ const about = {
   role: 'Software Engineer',
   description:
     'Hey! Thanks for stopping by 😊😊😊😊',
-  resume: 'https://example.com',
+  resume: 'https://drive.google.com/file/d/16bUkF41x-tJyq_p8Ec94M_uJ8GQHiawh/view?usp=share_link',
   social: {
     linkedin: 'https://www.linkedin.com/in/dipesh-shrestha-1196311b4/',
     github: 'https://github.com/dexhrestha',
@@ -25,8 +25,16 @@ const projects = [
     description:
       'I will add a project link here. My private cloud demo.',
     stack: ['Cloud', 'SaaS', 'Drive','Node','Analytics'],
-    sourceCode: 'https://github.com/dexhrestha',
-    livePreview: 'https://github.com/dexhrestha',
+    // sourceCode: 'https://github.com/dexhrestha',
+    // livePreview: 'https://github.com/dexhrestha',
+  },
+  {
+    name: 'Nepali Sentiment Analysis',
+    description:
+      'Nepali language sentiment analysis using distilbert hosted in huggingface.',
+    stack: ['NLP', 'BERT', 'Pytorch','Python'],
+    sourceCode: 'https://huggingface.co/dexhrestha/Nepali-DistilBERT',
+    livePreview: 'https://huggingface.co/dexhrestha/Nepali-DistilBERT',
   }
 ]
 

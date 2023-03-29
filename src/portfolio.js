@@ -1,6 +1,6 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'http://dipeshrestha.me',
+  homepage: 'http://dipeshrestha.com.np',
   title: 'DS.',
 }
 

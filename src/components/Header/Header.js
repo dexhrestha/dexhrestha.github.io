@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = ({hideNav}) => {
   const { homepage, title } = header
-  console.log("Hide nav",hideNav)
+  // console.log("Hide nav",hideNav)
   return (
     <header className='header center'>
       <h3>

@@ -9,21 +9,25 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
 import './App.css'
+// import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+import Timeline from './components/Timeline/Timeline'
+import timelineData from './components/Timeline/TimelineData'
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
 
   return (
     <div id='top' className={`${themeName} app`}>
+      
       <Header />
 
       <main>
         <About />
-        <Projects />
+        <Timeline data={timelineData}/>
         <Skills />
+        <Projects />
         <Contact />
       </main>
-
       <ScrollToTop />
       <Footer />
     </div>

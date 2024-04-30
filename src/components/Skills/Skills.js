@@ -10,8 +10,23 @@ const Skills = () => {
       <h2 className='section__title'>Skills</h2>
       <ul className='skills__list'>
         {skills.map((skill) => (
-          <li key={uniqid()} className='skills__list-item btn btn--plain'>
-            {skill}
+          <li key={uniqid()} className='skills__list-item'>
+            {skill.link ? (
+                
+              <a href={skill.link}>
+                <span type='button' className='btn btn--plain'>
+              {skill.name}
+            </span>
+                    
+                </a>
+                
+                ) : (
+                  <span type='button' className='btn btn--plain'>
+                  {skill.name}
+                </span>
+                )}
+            
+            
           </li>
         ))}
       </ul>

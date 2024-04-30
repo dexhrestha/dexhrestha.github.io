@@ -1,7 +1,7 @@
 .projects__grid {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
+  grid-gap: 5em;
 }

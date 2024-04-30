@@ -7,12 +7,12 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Dipesh Shrestha',
-  role: 'Data Analyst',
+  role: 'Data Scientist',
   description:
-    'Passionate data analyst with a keen interest in behavior analysis. Leveraging prior internship experience, adept at collecting and analysing data to uncover patterns and trends, ultimately enhancing user experience and engagement. Proficient in statistical analysis, data visualization, and machine learning techniques, with a focus on delivering actionable insights to drive business strategies.',
-  resume: 'https://drive.google.com/file/d/1CnLaoBg92O1mEJ5ntn-GvIlROZnLQ9s0/',
+    "A graduate of the University of Greenwich's Master's in Data Science program and a Microsoft-certified Power BI Data Analyst, I possess a solid foundation in analytics. My recent work focused on player modeling behavior and analytics for gambling players, complemented by 2 years of experience in clinical data analytics. I am eager to leverage my expertise in finance and healthcare analytics, as well as behavior analytics, to inform strategic decision-making and drive positive outcomes.",
+  resume: 'https://docs.google.com/document/d/1Gbq84i042QLx3rrf2IwB3vF4KiGTajZw/edit?usp=sharing&ouid=115396742587346328900&rtpof=true&sd=true',
   social: {
-    linkedin: 'https://www.linkedin.com/in/dipesh-shrestha-1196311b4/',
+    linkedin: 'linkedin.com/in/dexhrestha',
     github: 'https://github.com/dexhrestha',
     instagram: 'https://instagram.com/dexhrestha',
   },
@@ -42,19 +42,22 @@ const projects = [
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Redux',
-  'Django',
-  'AWS',
-  'Git',
-  'CI/CD',
-  'R',
-  'Java',
-]
+  // { name: 'SQL', link: 'test' },
+  { name: 'SQL'},
+  { name: 'Python' },
+  { name: 'R' },
+  { name: 'Power BI' },
+  { name: 'DAX' },
+  { name: 'Power Query' },
+  { name: 'Shiny' },
+  { name: 'Tableau' },
+  { name: 'Git' },
+  { name: 'CI/CD' },
+  { name: 'Excel' },
+  { name: 'Azure' },
+  { name: 'GCP' }
+];
+
 
 const contact = {
   // email is optional - if left empty Contact section won't show up

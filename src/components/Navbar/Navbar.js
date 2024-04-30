@@ -54,17 +54,20 @@ const Navbar = () => {
             </a>
           </li>
         ) : null}
-      </ul>
 
-      <button
+<button
         type='button'
         onClick={toggleTheme}
-        className='btn btn--icon nav__theme'
+        className='nav__list-item btn btn--icon'
         aria-label='toggle theme'
       >
         {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
       </button>
 
+
+      </ul>
+
+      
       <button
         type='button'
         onClick={toggleNavList}

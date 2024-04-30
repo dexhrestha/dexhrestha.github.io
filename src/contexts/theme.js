@@ -5,7 +5,7 @@ const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
   const [themeName, setThemeName] = useState('light')
-
+  console.log(localStorage.themeName)
   useEffect(() => {
     const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     setThemeName(darkMediaQuery.matches ? 'dark' : 'light')

@@ -1,5 +1,8 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
 .app {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif , 'Font Awesome 5 Free';
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
@@ -11,6 +14,7 @@
   --clr-fg: #555;
   --clr-fg-alt: #444;
   --clr-primary: #2978b5;
+  --profile-image:url('../public/profile_light.jpg');
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -20,6 +24,7 @@
   --clr-fg: #ffffff;
   --clr-fg-alt: #f4f4f4;
   --clr-primary: #8f8f8f;
+  --profile-image:url('../public/profile_dark.jpg');
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -87,8 +92,12 @@ main {
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
+}
+
+
+a span.btn{
+ color:var(--clr-primary); 
 }
 
 .btn--outline {
@@ -124,12 +133,14 @@ main {
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-bg-alt);
+  color: var(--clr-primary);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   border: 0;
 }
 
 .btn--plain:hover {
-  transform: translateY(-4px);
+  /* transform: translateY(-4px); */
+  transform: scale(1.2);
 }
 
 .btn--icon {

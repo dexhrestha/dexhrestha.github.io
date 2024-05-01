@@ -1,0 +1,33 @@
+.certifications__grid {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-gap: 3em;
+    justify-content: center;
+  }
+  
+  .certifications{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .certifications .section__title{
+    margin: 0 auto;
+  
+  }
+
+
+
+@media screen and (max-width: 767px) {
+  .certifications__grid {
+    flex-direction: column; /* Change to vertical layout for small screens */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .certifications {
+    margin-bottom: 20px;
+    width: 100%; /* Make certifications take full width */
+  }
+}

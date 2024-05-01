@@ -8,7 +8,8 @@ const Projects = () => {
 
   return (
     <section id='projects' className='section projects'>
-      <h2 className='section__title'>Projects</h2>
+      <h2 className='section__title'>PROJECTS</h2>
+      <p> Crunching Numbers, Unveiling Stories: Your Data Odyssey Awaits! </p>
 
       <div className='projects__grid'>
         {projects.map((project) => (

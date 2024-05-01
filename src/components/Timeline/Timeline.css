@@ -5,7 +5,7 @@
   --line: var(--clr-primary);
   background: var(--clr-bg);
   color: var(--text);
-  padding: 30px;
+  padding: 30px auto;
 }
 
 .timeline h1 {

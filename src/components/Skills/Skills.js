@@ -8,6 +8,7 @@ const Skills = () => {
   return (
     <section className='section skills' id='skills'>
       <h2 className='section__title'>Skills</h2>
+      <p>Mastering the Craft, Unraveling Data Spells</p>
       <ul className='skills__list'>
         {skills.map((skill) => (
           <li key={uniqid()} className='skills__list-item'>

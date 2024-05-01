@@ -1,8 +1,13 @@
 .project {
-  padding: 2em;
-  margin: 1em auto;
-  text-align: center;
+  position: relative; /* Add position relative for absolute positioning */
+  height: auto; /* Change to auto to accommodate varying content */
+  width: 95vw;
+  max-width: 850px;
+  margin: 2em auto;
+  border-radius: 25px;
+  background: var(--clr-bg);
   box-shadow: var(--shadow);
+  text-align: center;
   transition: transform 0.2s linear;
 }
 
@@ -10,24 +15,101 @@
   transform: translateY(-7px);
 }
 
-.project__description {
-  margin-top: 1em;
+.project .title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+/* Apply overlay hover effect only for small screens */
+@media screen and (max-width: 767px) {
+  .project:hover .title-overlay {
+    opacity: 1;
+  }
+
+  .project:hover .img img {
+    filter: blur(5px);
+  }
 }
 
-.project__stack {
+.inner-part {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  margin: 1.2em 0;
+  padding: 0 25px;
 }
 
-.project__stack-item {
-  margin: 0.5em;
+.inner-part .img {
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px var(--shadow);
+  position: relative; /* Add position relative for absolute positioning */
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.content .interact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-height: 100px;
+}
+
+.content span {
+  display: block;
+  color: var(--clr-fg);
+  margin-bottom: 20px;
+  font-size: 20px;
   font-weight: 500;
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
 }
 
-.project .link--icon {
-  margin-left: 0.5em;
+.content .title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--clr-fg);
+  margin-bottom: 10px;
+}
+
+.content .text {
+  color: var(--clr-fg);
+  font-size: 19px;
+  margin-bottom: 10px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.content {
+  display: none; /* Hide content by default */
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    display: block; /* Display content for larger screens */
+    padding: 0 20px 0 35px;
+    width: 530px;
+    max-height: 300px;
+    margin-left: 50px;
+    margin: 1em auto;
+    opacity: 1;
+    transition: 0.6s;
+  }
 }

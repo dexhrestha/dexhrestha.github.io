@@ -1,0 +1,53 @@
+.card {
+  width: auto; /* Adjust the width as needed */
+  height: 250px; /* Adjust the height as needed */
+  background-color: var(--clr-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card > div {
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.date {
+    color: var(--clr-fg-alt);
+   margin: 0;
+    text-align: center;
+  }
+  
+
+  .text{
+    display: flex;
+    color: var(--clr-fg-alt);
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .certifications__grid {
+      flex-direction: column; /* Change to vertical layout for small screens */
+      align-items: stretch; /* Stretch items to full width */
+    }
+  
+    .certifications {
+      margin-bottom: 20px;
+      width: 100%; /* Make certifications take full width */
+    }
+  }

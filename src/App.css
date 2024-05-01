@@ -93,10 +93,14 @@ main {
   font-weight: 500;
   font-size: 0.9rem;
   transition: transform 0.2s ease-in-out;
+  max-height: 100px;
 }
 
 
-a span.btn{
+a span {
+  color: var(--clr-primary); 
+}
+a span .btn{
  color:var(--clr-primary); 
 }
 

@@ -1,6 +1,5 @@
 .about {
   flex-direction: column;
-  margin-top: 1em;
 }
 
 .about__image {
@@ -8,8 +7,7 @@
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 2em auto;
-  
+  /* margin: 2em auto; */
   /* Specify the background image using url() function */
   background-image: var(--profile-image);
   /* Add any other background properties you need */
@@ -29,7 +27,8 @@
 }
 
 .about__role {
-  margin-top: 1.2em;
+  margin-top:1em;
+  
 }
 
 .about__desc {
@@ -40,6 +39,8 @@
 .about__desc,
 .about__contact {
   margin-top: 2.4em;
+ text-align: center;
+  justify-content: center;
 }
 
 .about .link--icon {

@@ -1,6 +1,12 @@
 #skills{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#skills .section__title{
   margin: 0 auto;
 }
+
 .skills__list {
   max-width: 450px;
   width: 95%;
@@ -12,4 +18,5 @@
 
 .skills__list-item {
   margin: 0.5em;
+  
 }

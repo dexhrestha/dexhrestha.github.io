@@ -11,14 +11,14 @@ const Timeline = ({ data }) => (
             {item.link ? (
                 <h3>
                 <a href={item.link}>
-                    {item.title}
+                    <span>{item.title}</span>
                 </a>
                 </h3>
                 ) : (
                 <h3>{item.title}</h3>
                 )}
             <div>
-                <p style={{'margin':0,'font-weight':'bold'}}>{item.date}</p>        
+                <p style={{'margin':0,'fontWeight':'bold'}}>{item.date}</p>        
                 <p>{item.description}</p>
             </div>
             </li>

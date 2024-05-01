@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Contact from './components/Contact/Contact'
+import Certifications from './components/Certifications/Certifications'
 import Footer from './components/Footer/Footer'
 
 import './App.css'
@@ -26,6 +27,7 @@ const App = () => {
         <Timeline data={timelineData}/>
         <Skills />
         <Projects />
+        <Certifications />
         <Contact />
       </main>
       <ScrollToTop />

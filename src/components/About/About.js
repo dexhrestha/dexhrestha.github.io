@@ -31,11 +31,11 @@ const About = () => {
         )}
 
       
-                <a href="#/research">
-                  <span type='button' className='btn btn--outline'>
-                    Portfolio
-                  </span>
-                </a>
+        <a href="#/research">
+          <span type='button' className='btn btn--outline'>
+          Portfolio
+          </span>
+        </a>
       
 
         {social && (

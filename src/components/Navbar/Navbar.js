@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import Brightness2Icon from '@material-ui/icons/Brightness2'
 import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -7,11 +8,22 @@ import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact } from '../../portfolio'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
-  const toggleNavList = () => setShowNavList(!showNavList)
+  const toggleNavList = (item) =>{
+     setShowNavList(!showNavList)
+     if (item==='projects'){
+      scrollToProjects();
+     }
+     if (item==='skills'){
+      scrollToSkills();
+     }
+     if (item==='contact'){
+      scrollToContact();
+     }
+    }
 
   return (
     <nav className='center nav'>
@@ -21,49 +33,49 @@ const Navbar = () => {
       >
         {projects.length ? (
           <li className='nav__list-item'>
-            <a
-              href='#/research'
+            <Link to="/research"
+              
               onClick={toggleNavList}
               className='link link--nav'
             >
               Research
-            </a>
+            </Link>
           </li>
         ) : null}
 
         {projects.length ? (
           <li className='nav__list-item'>
-            <a
-              href='/#projects'
-              onClick={toggleNavList}
+            <NavLink
+            to='/#projects'
+              onClick={()=>toggleNavList('projects')}
               className='link link--nav'
             >
               Projects 
-            </a>
+            </NavLink>
           </li>
         ) : null}
 
         {skills.length ? (
           <li className='nav__list-item'>
-            <a
-              href='/#skills'
-              onClick={toggleNavList}
+            <NavLink
+              to='/#skills'
+              onClick={()=>toggleNavList('skills')}
               className='link link--nav'
             >
               Skills
-            </a>
+            </NavLink>
           </li>
         ) : null}
 
         {contact.email ? (
           <li className='nav__list-item'>
-            <a
-              href='/#contact'
-              onClick={toggleNavList}
+            <NavLink
+              to='/#contact'
+              onClick={()=>toggleNavList('contact')}
               className='link link--nav'
             >
               Contact
-            </a>
+            </NavLink>
           </li>
         ) : null}
 

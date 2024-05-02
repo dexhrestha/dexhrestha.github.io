@@ -31,7 +31,7 @@ const About = () => {
         )}
 
       
-        <a href="#/research">
+        <a href="#/portfolio">
           <span type='button' className='btn btn--outline'>
           Portfolio
           </span>

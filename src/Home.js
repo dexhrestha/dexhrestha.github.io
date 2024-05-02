@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useState,useEffect,useContext, useRef } from 'react'
 import { ThemeContext } from './contexts/theme'
 import Header from './components/Header/Header'
 import About from './components/About/About'
@@ -20,23 +20,53 @@ import { skills } from './portfolio'
 
 const Home = () => {
   const [{ themeName }] = useContext(ThemeContext)
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  
+  useEffect(() => {
+    // Simulating loading time
+    const timeout = setTimeout(() => {
+      setLoading(false);
+      if (window.location.hash === '#projects') {
+        scrollToSection(projectsRef);
+      }
+    }, 2000); // Adjust the timeout as needed
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+
+
+  
   return (
+    loading ? (
+        // Display loading spinner while components are loading
+        <div>Loading...</div>
+      ) : (
     <div id='top' className={`${themeName} app`}>
       
-      <Header />
+      <Header scrollToProjects={() => scrollToSection(projectsRef)}
+        scrollToSkills={() => scrollToSection(skillsRef)}
+        scrollToContact={() => scrollToSection(contactRef)}  />
 
       <main>
         <About />
         <Timeline data={timelineData}/>
-        <Skills skills={skills} header/>
-        <Projects />
+        <Skills skills={skills} skillsRef={skillsRef} header/>
+        <Projects projectsRef={projectsRef}/>
         <Certifications />
-        <Contact />
+        <Contact contactRef={contactRef}/>
       </main>
       <ScrollToTop />
       <Footer />
-    </div>
+    </div>)
+      
   )
 }
 

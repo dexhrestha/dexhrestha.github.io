@@ -3,11 +3,11 @@ import { projects } from '../../portfolio'
 import ProjectContainer from '../ProjectContainer/ProjectContainer'
 import './Projects.css'
 
-const Projects = () => {
+const Projects = ({projectsRef}) => {
   if (!projects.length) return null
 
   return (
-    <section id='projects' className='section projects'>
+    <section id='projects' ref={projectsRef} className='section projects'>
       <h2 className='section__title'>PROJECTS</h2>
       <p> Crunching Numbers, Unveiling Stories: Your Data Odyssey Awaits! </p>
 

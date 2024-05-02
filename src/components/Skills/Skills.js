@@ -1,12 +1,13 @@
 import uniqid from 'uniqid'
 
 import './Skills.css'
+import { Link } from 'react-router-dom'
 
-const Skills = ({skills,header,filter}) => {
+const Skills = ({skills,header,filter,skillsRef}) => {
   if (!skills.length) return null
 
   return (
-    <section className='section skills' id='skills'>
+    <section className='section skills' id='skills' ref={skillsRef}>
 
       {header ? (
               <>
@@ -18,12 +19,12 @@ const Skills = ({skills,header,filter}) => {
       <li key={uniqid()} className='skills__list-item'>
       {filter ?(
           
-        <a href="/portfolio/?q=all">
+        <Link to="/portfolio">
                 <span type='button' className='btn btn--outline'>
               All
             </span>
                     
-                </a>):null}</li>
+                </Link>):null}</li>
 
         {skills.map((skill) => (
           <li key={uniqid()} className='skills__list-item'>

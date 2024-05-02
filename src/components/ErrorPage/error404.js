@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { useRouteError } from "react-router-dom"
 import {Container,Row,Col} from 'react-bootstrap'
 
 import { ThemeContext } from '../../contexts/theme'
@@ -10,9 +9,6 @@ import '../../App.css'
 
 export default function ErrorPage() {
     const [{ themeName }] = useContext(ThemeContext)
-
-  const error = useRouteError();
-  console.error(error);
 
   return (
 

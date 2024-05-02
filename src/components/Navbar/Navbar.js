@@ -22,7 +22,7 @@ const Navbar = () => {
         {projects.length ? (
           <li className='nav__list-item'>
             <a
-              href='/research'
+              href='#/research'
               onClick={toggleNavList}
               className='link link--nav'
             >

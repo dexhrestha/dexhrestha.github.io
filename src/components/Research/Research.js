@@ -3,7 +3,7 @@
 
 import { Grid, Paper, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import './Portfolio.css'; // Import the CSS file
+import './Research.css'; // Import the CSS file
 
 import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
@@ -14,8 +14,6 @@ import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import AboutMin from '../About/AboutMin';
-import Skills from '../Skills/Skills';
-import { projects } from '../../portfolio';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,22 +22,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const projects = [
+  { id: 1, name: 'Project 1', description: 'Description of Project 1',src:"#"},
+  { id: 2, name: 'Project 2', description: 'Description of Project 2',src:"#"},
+  // Add more projects as needed
+];
 
-
-const Portfolio = () => {
+const Research = () => {
   const classes = useStyles();
   const [{ themeName }] = useContext(ThemeContext)
 
-    const stackSet = new Set();
-  projects.forEach((project) => {
-    project.stack.forEach((technology) => {
-      stackSet.add({ name: technology });
-    });
-  });
 
-  // Convert set to array for easier manipulation
-  const stackArray = Array.from(stackSet);
-  
   return (
     <div id='top' className={`${themeName} app`}>
        
@@ -54,14 +47,17 @@ const Portfolio = () => {
         {/* Right Row */}
         <Grid item xs >
         <section  className="rightRow center">
-        <h2 className='section__title'>Portfolio</h2>
-          <Skills skills={[...stackSet]} header={false} filter/>
+        <h2 className='section__title'>Publications</h2>
           {projects.map((project) => (<ProjectContainer project={project} className="research__center"/>))}
           <Contact />
         </section>
 
         
         </Grid>
+        
+
+        
+        
       </Grid>
       
       
@@ -72,4 +68,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Research;

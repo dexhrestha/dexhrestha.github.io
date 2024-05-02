@@ -1,8 +1,9 @@
 .project {
   position: relative; /* Add position relative for absolute positioning */
-  height: auto; /* Change to auto to accommodate varying content */
+
   width: 95vw;
   max-width: 850px;
+  max-height: fit-content;
   margin: 2em auto;
   border-radius: 25px;
   background: var(--clr-bg);
@@ -111,5 +112,6 @@
     margin: 1em auto;
     opacity: 1;
     transition: 0.6s;
+    
   }
 }

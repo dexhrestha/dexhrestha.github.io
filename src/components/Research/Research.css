@@ -1,0 +1,46 @@
+/* styles.css */
+.leftRow {
+  position: fixed;
+  left: 0;
+  /* bottom: 10px; */
+  width: 25%; /* Adjust as needed */
+  height: 90vh; /* Adjust as needed */
+  background-color: var(--clr-bg);
+  padding: 16px; /* Material-UI spacing unit */
+  overflow: hidden;
+  border-right: 2px solid var(--clr-fg);
+}
+
+.v_center {
+  align-items: center;
+  justify-content: center;
+  top: 2em;
+}
+
+.rightRow {
+  margin-left: 25%; /* Match the width of leftRow */
+  padding: 16px; /* Material-UI spacing unit */
+  height: auto;
+  width: auto;
+  max-width: 100vh;
+  display: flex; /* Ensure elements inside rightRow use flex layout */
+  flex-direction: column; /* Arrange elements vertically */
+}
+
+.card {
+  background-color: var(--clr-bg);
+  margin-bottom: 16px; /* Material-UI spacing unit */
+  color: var(--clr-fg);
+  flex: 1; /* Distribute remaining space among cards */
+}
+
+.list__text {
+  color: var(--clr-fg);
+}
+
+section .contact{
+  margin: 0;
+}
+.section__title{
+  margin: 1em;
+}

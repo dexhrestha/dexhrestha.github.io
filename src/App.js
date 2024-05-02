@@ -9,10 +9,14 @@ import Contact from './components/Contact/Contact'
 import Certifications from './components/Certifications/Certifications'
 import Footer from './components/Footer/Footer'
 
+
 import './App.css'
 // import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
 import Timeline from './components/Timeline/Timeline'
 import timelineData from './components/Timeline/TimelineData'
+
+
+import { skills } from './portfolio'
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
@@ -25,7 +29,7 @@ const App = () => {
       <main>
         <About />
         <Timeline data={timelineData}/>
-        <Skills />
+        <Skills skills={skills} header/>
         <Projects />
         <Certifications />
         <Contact />

@@ -12,7 +12,7 @@ const about = {
     "Data-driven decision making leads to informed strategies, empowered teams, and measurable success in today's competitive business landscape.",
   resume: 'https://docs.google.com/document/d/1Gbq84i042QLx3rrf2IwB3vF4KiGTajZw/edit?usp=sharing&ouid=115396742587346328900&rtpof=true&sd=true',
   social: {
-    linkedin: 'linkedin.com/in/dexhrestha',
+    linkedin: 'https://linkedin.com/in/dexhrestha',
     github: 'https://github.com/dexhrestha',
     instagram: 'https://instagram.com/dexhrestha',
   },

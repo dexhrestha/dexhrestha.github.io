@@ -1,18 +1,36 @@
 import uniqid from 'uniqid'
-import { skills } from '../../portfolio'
+
 import './Skills.css'
 
-const Skills = () => {
+const Skills = ({skills,header,filter}) => {
   if (!skills.length) return null
 
   return (
     <section className='section skills' id='skills'>
-      <h2 className='section__title'>Skills</h2>
-      <p>Mastering the Craft, Unraveling Data Spells</p>
+
+      {header ? (
+              <>
+                <h2 className='section__title'>Skills</h2>
+                <p>Mastering the Craft, Unraveling Data Spells</p>
+              </>
+            ) : null}
       <ul className='skills__list'>
+      <li key={uniqid()} className='skills__list-item'>
+      {filter ?(
+          
+        <a href="/portfolio/?q=all">
+                <span type='button' className='btn btn--outline'>
+              All
+            </span>
+                    
+                </a>):null}</li>
+
         {skills.map((skill) => (
           <li key={uniqid()} className='skills__list-item'>
-            {skill.link ? (
+            
+
+            {
+            skill.link ? (
                 
               <a href={skill.link}>
                 <span type='button' className='btn btn--plain'>

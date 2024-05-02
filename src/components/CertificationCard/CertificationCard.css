@@ -1,4 +1,4 @@
-.card {
+.certification__card {
   width: auto; /* Adjust the width as needed */
   height: 250px; /* Adjust the height as needed */
   background-color: var(--clr-bg);
@@ -12,12 +12,12 @@
   padding: 10px;
 }
 
-.card > div {
+.certification__card > div {
   width: 100%;
   height: 100%;
 }
 
-.card img {
+.certification__card img {
   width: 100%;
   height: 80%;
   object-fit: contain;
@@ -41,13 +41,8 @@
 
 
   @media screen and (max-width: 767px) {
-    .certifications__grid {
-      flex-direction: column; /* Change to vertical layout for small screens */
-      align-items: stretch; /* Stretch items to full width */
-    }
   
-    .certifications {
-      margin-bottom: 20px;
-      width: 100%; /* Make certifications take full width */
+    .certification__card {
+      max-width: fit-content;
     }
   }

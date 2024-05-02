@@ -9,7 +9,7 @@ const Header = ({hideNav}) => {
       
       <h3>
         {homepage ? (
-          <a href={homepage} className='link'>
+          <a href='/' className='link'>
             {title}
           </a>
         ) : (

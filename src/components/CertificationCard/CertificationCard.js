@@ -5,7 +5,7 @@ import './CertificationCard.css'
 const CertificationCard = ({item}) =>  (
 
     
-    <a href={item.href} className="card">
+    <a href={item.href} className="certification__card">
         <div>
             <img src={item.src} alt={item.alt}/>
             <div className='text'>

@@ -20,14 +20,20 @@
 
 
 
-@media screen and (max-width: 767px) {
-  .certifications__grid {
-    flex-direction: column; /* Change to vertical layout for small screens */
-    align-items: stretch; /* Stretch items to full width */
-  }
+  @media screen and (max-width: 767px) {
 
-  .certifications {
-    margin-bottom: 20px;
-    width: 100%; /* Make certifications take full width */
+    .certifications__grid {
+      flex-direction: column; /* Change to vertical layout for small screens */
+      align-items: center;
+      justify-content: center; /* Center align all contents horizontally */
+      width: 100vh;
+    }
+  
+    .certifications {
+      margin-bottom: 20px;
+      width: 100%; /* Make certifications take full width */
+      justify-content: center; /* Center align all contents horizontally */
+      
+    }
   }
-}
+  

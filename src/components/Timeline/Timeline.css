@@ -124,10 +124,11 @@
   text-wrap: pretty;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 920px) {
   .timeline ul {
     display: flex;
     flex-direction: column;
+ 
   }
   .timeline ul li {
     grid-column: 1 !important;

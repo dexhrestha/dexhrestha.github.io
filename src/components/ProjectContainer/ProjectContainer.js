@@ -11,16 +11,11 @@ const ProjectContainer = ({ project }) => (
         <a href="#portfolio"><div className="title-overlay">{project.name}</div></a> {/* Title overlay */}
       </span>
       <div className="content">
-        <div className="title">{project.name}</div>
+        <a href="portfolio" type='link'><span className="title">{project.name}</span></a>
         <div className="text">
           <p className='project__description'>{project.description}</p>
         </div>
         <div className='interact'>
-          <a href="#portfolio">
-            <span type='button' className='btn btn--outline'>
-              Read more
-            </span>
-          </a>
           {project.sourceCode && (
             <a
               href={project.sourceCode}

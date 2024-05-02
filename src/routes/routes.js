@@ -3,6 +3,7 @@ import  App  from '../App';
 import Counter from  "../components/Counter/Counter"
 import ErrorPage from '../components/ErrorPage/error404';
 import Portfolio from '../components/Portfolio/Portfolio';
+import Research from '../components/Research/Research';
 
 const router = createBrowserRouter([
     {
@@ -14,11 +15,15 @@ const router = createBrowserRouter([
     {
       path:"/dpka",
       element: <Counter />
+    },
+    {
+      path:"/research",
+      element: <Research />
+    },
+    {
+      path:"/portfolio",
+      element: <Portfolio />
     }
-    // {
-    //   path:"/portfolio",
-    //   element: <Portfolio />
-    // }
   ]);
 
 export default router;

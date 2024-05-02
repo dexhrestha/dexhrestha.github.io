@@ -13,13 +13,27 @@
   /* Add any other background properties you need */
   background-size: cover; /* or contain, depending on how you want the image to be displayed */
   background-position:  calc(50% - 3px) center;
+
+  border: 2px solid #fff; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
   
 }
 
 
-.about__image {
+.about__image_min{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* margin: 2em auto; */
+  /* Specify the background image using url() function */
+  background-image: var(--profile-image);
+  /* Add any other background properties you need */
+  background-size: cover; /* or contain, depending on how you want the image to be displayed */
+  background-position:  calc(50% - 3px) center;
   border: 2px solid #fff; 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  margin: 1em;
 }
 
 .about__name {
@@ -39,6 +53,7 @@
 .about__desc,
 .about__contact {
   margin-top: 2.4em;
+  
  text-align: center;
   justify-content: center;
 }

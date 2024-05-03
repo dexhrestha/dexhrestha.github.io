@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
 import './ScrollToTop.css'
+import { NavLink } from 'react-router-dom'
 
-const ScrollToTop = () => {
+const ScrollToTop = ({scrollToTop}) => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -15,9 +16,9 @@ const ScrollToTop = () => {
 
   return isVisible ? (
     <div className='scroll-top'>
-      <a href='#top'>
-      ‎ <ArrowUpwardIcon fontSize='large' />
-      </a>
+      <NavLink to="/#top">
+      ‎ <ArrowUpwardIcon onClick={scrollToTop} fontSize='large' />
+      </NavLink>
     </div>
   ) : null
 }

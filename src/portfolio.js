@@ -2,7 +2,7 @@ const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://dipeshrestha.com.np/',
   title: 'DS',
-}
+};
 
 const about = {
   // all the properties are optional - can be left empty or deleted
@@ -16,7 +16,7 @@ const about = {
     github: 'https://github.com/dexhrestha',
     instagram: 'https://instagram.com/dexhrestha',
   },
-}
+};
 
 const projects = [
   // projects can be added an removed
@@ -49,7 +49,7 @@ const projects = [
     sourceCode: 'https://github.com/dexhrestha',
     livePreview: 'https://github.com/dexhrestha',
   }
-]
+];
 
 const skills = [
   // skills can be added or removed
@@ -74,7 +74,7 @@ const skills = [
 const contact = {
   // email is optional - if left empty Contact section won't show up
   email: 'dipesh.shrestha009@gmail.com',
-}
+};
 
 
 const certifications = [
@@ -83,7 +83,7 @@ const certifications = [
   {'name':'DataCamp','src':'certifications/da_badge.svg',href:"https://www.datacamp.com/certificate/DA0027078983162",'date':'02/03/2026',},
   {'name':'DataCamp','src':'certifications/sql_badge.svg',href:"https://www.datacamp.com/certificate/SQA0019399922684",'date':'17/04/2026',},
   
-]
+];
 
 export { header, about, projects, skills, contact, certifications }
 

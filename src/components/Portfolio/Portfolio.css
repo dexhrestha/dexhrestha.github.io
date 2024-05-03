@@ -50,3 +50,38 @@ section .skills{
     margin: 0;
 }
 
+/* styles.css */
+
+/* Common styles for both small and large screens */
+.section__title {
+  margin: 1em;
+}
+
+.list__text {
+  color: var(--clr-fg);
+}
+
+/* Styles for small screens */
+@media (max-width: 600px) {
+  .leftRow {
+    display: none; /* Hide the leftRow for small screens */
+  }
+
+  .rightRow {
+    margin-left: auto; /* Remove margin to align to center */
+    margin-right: auto; /* Remove margin to align to center */
+    padding: 16px; /* Material-UI spacing unit */
+    height: auto;
+    width: auto;
+    max-width: 100vh;
+    display: flex; /* Ensure elements inside rightRow use flex layout */
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Align items to center */
+  }
+
+  .card {
+    margin-bottom: 16px; /* Material-UI spacing unit */
+    color: var(--clr-fg);
+    width: 90%; /* Adjust width as needed */
+  }
+}

@@ -4,11 +4,10 @@
 import { Grid, Paper, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Portfolio.css'; // Import the CSS file
-
+import uniqid from 'uniqid';
 import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 
-import Header from '../Header/Header'
 import ScrollToTop from '../ScrollToTop/ScrollToTop'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
@@ -42,13 +41,11 @@ const Portfolio = () => {
   
   return (
     <div id='top' className={`${themeName} app`}>
-       
-       <Header />
-
+      
       <main>
-      <Grid container direction='column'  alignItems='Center'>
+      <Grid container direction='column'  >
         {/* Left Row */}
-        <Grid item className="leftRow">
+        <Grid item className="leftRow" alignContent='center'>
           <AboutMin />         
         </Grid>
         {/* Right Row */}
@@ -56,7 +53,7 @@ const Portfolio = () => {
         <section  className="rightRow center">
         <h2 className='section__title'>Portfolio</h2>
           <Skills skills={[...stackSet]} header={false} filter/>
-          {projects.map((project) => (<ProjectContainer project={project} className="research__center"/>))}
+          {projects.map((project) => (<ProjectContainer key={uniqid()} project={project} className="research__center"/>))}
           <Contact />
         </section>
 

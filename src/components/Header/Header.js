@@ -1,8 +1,8 @@
-import { header } from '../../portfolio'
 import Navbar from '../Navbar/Navbar'
 import './Header.css'
+import { header } from '../../portfolio';
 
-const Header = ({scrollToProjects,scrollToSkills,scrollToContact,hideNav}) => {
+const Header = ({currentPage,scrollToProjects,scrollToSkills,scrollToContact,hideNav}) => {
   const { homepage, title } = header
   return (
     <header className='header center'>
@@ -17,7 +17,7 @@ const Header = ({scrollToProjects,scrollToSkills,scrollToContact,hideNav}) => {
         )}
       </h3>
       
-      {hideNav ? (<p/>):(<Navbar scrollToProjects={scrollToProjects}
+      {hideNav ? (<p/>):(<Navbar currentPage={currentPage} scrollToProjects={scrollToProjects}
         scrollToSkills={scrollToSkills}
         scrollToContact={scrollToContact}/>)}
       

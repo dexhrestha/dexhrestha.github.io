@@ -14,7 +14,6 @@ export default function ErrorPage() {
 
 
     <div id="top error-page" className={`${themeName} app`} >
-            <Header hideNav/>
             <main>
             <Container fluid className="vh-100 d-flex align-items-center justify-content-center">
   <Row>

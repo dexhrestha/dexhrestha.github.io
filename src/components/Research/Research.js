@@ -4,11 +4,11 @@
 import { Grid, Paper, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Research.css'; // Import the CSS file
-
+import uniqid from 'uniqid';
 import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 
-import Header from '../Header/Header'
+
 import ScrollToTop from '../ScrollToTop/ScrollToTop'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
@@ -35,31 +35,22 @@ const Research = () => {
 
   return (
     <div id='top' className={`${themeName} app`}>
-       
-       <Header />
 
       <main>
-      <Grid container direction='column'  alignItems='Center'>
+      <Grid container direction='column' >
         {/* Left Row */}
-        <Grid item className="leftRow">
+        <Grid item className="leftRow" alignItems='center' alignContent='center'>
           <AboutMin />         
         </Grid>
         {/* Right Row */}
         <Grid item xs >
-        <section  className="rightRow center">
+        <section  className="rightRow">
         <h2 className='section__title'>Publications</h2>
-          {projects.map((project) => (<ProjectContainer project={project} className="research__center"/>))}
+          {projects.map((project) => (<ProjectContainer key={uniqid()} project={project} className="research__center"/>))}
           <Contact />
         </section>
-
-        
         </Grid>
-        
-
-        
-        
       </Grid>
-      
       
       </main>
       <ScrollToTop/>

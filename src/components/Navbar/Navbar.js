@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Brightness2Icon from '@material-ui/icons/Brightness2'
 import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
@@ -14,6 +14,7 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
 
   const toggleNavList = (item) =>{
      setShowNavList(!showNavList)
+
      if (item==='projects'){
       scrollToProjects();
      }
@@ -23,43 +24,46 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
      if (item==='contact'){
       scrollToContact();
      }
-    }
+  }
 
+    const isHomePage =   window.location.hash === '' ||  window.location.hash === '#/'  ||  window.location.hash === '#/#projects'  ||  window.location.hash === '#/#skills'  ||  window.location.hash === '#/#contact' ;  
+    console.log(window.location)
+  
   return (
     <nav className='center nav'>
       <ul
         style={{ display: showNavList ? 'flex' : null }}
         className='nav__list'
       >
-        {projects.length ? (
-          <li className='nav__list-item'>
-            <Link to="/research"
-              
-              onClick={toggleNavList}
+          {!isHomePage?(  <li className='nav__list-item'>
+            <Link
+              to='/'
+              onClick={() => toggleNavList('top')}
               className='link link--nav'
             >
-              Research
+              Home
             </Link>
-          </li>
-        ) : null}
+          </li>):null}
 
-        {projects.length ? (
+        
+
+        {isHomePage && projects.length ? (
           <li className='nav__list-item'>
             <NavLink
-            to='/#projects'
-              onClick={()=>toggleNavList('projects')}
+              to='/#projects'
+              onClick={() => toggleNavList('projects')}
               className='link link--nav'
             >
-              Projects 
+              Projects
             </NavLink>
           </li>
         ) : null}
 
-        {skills.length ? (
+        {isHomePage && skills.length ? (
           <li className='nav__list-item'>
             <NavLink
               to='/#skills'
-              onClick={()=>toggleNavList('skills')}
+              onClick={() => toggleNavList('skills')}
               className='link link--nav'
             >
               Skills
@@ -67,7 +71,7 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
           </li>
         ) : null}
 
-        {contact.email ? (
+        {isHomePage && contact.email ? (
           <li className='nav__list-item'>
             <NavLink
               to='/#contact'
@@ -78,6 +82,25 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
             </NavLink>
           </li>
         ) : null}
+
+
+<li className='nav__list-item'>
+          <Link to="/research"
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            Research
+          </Link>
+        </li>
+
+        <li className='nav__list-item'>
+          <Link to="/portfolio"
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            portfolio
+          </Link>
+        </li>
 
 <button
         type='button'

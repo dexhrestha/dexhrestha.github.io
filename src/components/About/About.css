@@ -1,5 +1,6 @@
 .about {
   flex-direction: column;
+  margin-top: 2em;
 }
 
 .about__image {
@@ -67,8 +68,10 @@
 }
 
 @media (max-width: 600px) {
-  .app .about {
+ .about {
     align-items: flex-start;
     margin-top: 2em;
+    text-align: center;
+    justify-content: center;
   }
 }

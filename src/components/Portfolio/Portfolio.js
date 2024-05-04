@@ -1,8 +1,4 @@
-
-
-
-import { Grid, Paper, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@mui/material';
 import './Portfolio.css'; // Import the CSS file
 import uniqid from 'uniqid';
 import { useContext } from 'react'
@@ -16,17 +12,7 @@ import AboutMin from '../About/AboutMin';
 import Skills from '../Skills/Skills';
 import { projects } from '../../portfolio';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    padding: theme.spacing(2),
-  },
-}));
-
-
-
 const Portfolio = () => {
-  const classes = useStyles();
   const [{ themeName }] = useContext(ThemeContext)
 
     const stackSet = new Set();
@@ -60,8 +46,6 @@ const Portfolio = () => {
         
         </Grid>
       </Grid>
-      
-      
       </main>
       <ScrollToTop/>
       <Footer />      

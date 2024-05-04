@@ -1,6 +1,6 @@
 import React from 'react';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LaunchIcon from '@material-ui/icons/Launch';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 import './ProjectContainer.css';
 
 const ProjectContainer = ({ project }) => (
@@ -8,7 +8,7 @@ const ProjectContainer = ({ project }) => (
     <div className="inner-part">
       <span className="img">
         <img id="sample" className="img-1" src={project.src} alt="Sales Dashboard" />
-        <a href="#portfolio"><div className="title-overlay">{project.name}</div></a> {/* Title overlay */}
+        <a href={project.blog}><div className="title-overlay">{project.name}</div></a> {/* Title overlay */}
       </span>
       <div className="content">
         <div className="title">{project.name}</div>

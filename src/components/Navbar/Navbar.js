@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
+import Brightness2Icon from '@mui/icons-material/Brightness2'
+import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact } from '../../portfolio'
 import './Navbar.css'
@@ -50,7 +50,7 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
         {isHomePage && projects.length ? (
           <li className='nav__list-item'>
             <NavLink
-              to='/#projects'
+              to='#projects'
               onClick={() => toggleNavList('projects')}
               className='link link--nav'
             >
@@ -62,7 +62,7 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
         {isHomePage && skills.length ? (
           <li className='nav__list-item'>
             <NavLink
-              to='/#skills'
+              to='#skills'
               onClick={() => toggleNavList('skills')}
               className='link link--nav'
             >
@@ -74,7 +74,7 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
         {isHomePage && contact.email ? (
           <li className='nav__list-item'>
             <NavLink
-              to='/#contact'
+              to='#contact'
               onClick={()=>toggleNavList('contact')}
               className='link link--nav'
             >

@@ -1,8 +1,5 @@
 
-
-
-import { Grid, Paper, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Paper, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@mui/material';
 import './Research.css'; // Import the CSS file
 import uniqid from 'uniqid';
 import { useContext } from 'react'
@@ -15,13 +12,6 @@ import Footer from '../Footer/Footer'
 import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import AboutMin from '../About/AboutMin';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    padding: theme.spacing(2),
-  },
-}));
-
 const projects = [
   { id: 1, name: 'Project 1', description: 'Description of Project 1',src:"#"},
   { id: 2, name: 'Project 2', description: 'Description of Project 2',src:"#"},
@@ -29,7 +19,6 @@ const projects = [
 ];
 
 const Research = () => {
-  const classes = useStyles();
   const [{ themeName }] = useContext(ThemeContext)
 
 

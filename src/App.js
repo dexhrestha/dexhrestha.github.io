@@ -2,12 +2,14 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState,useEffect,useContext, useRef } from 'react'
 import { ThemeContext } from './contexts/theme'
 
+
+
 import Home from './Home';
 import Research from './components/Research/Research';
 import Portfolio from './components/Portfolio/Portfolio';
 import ErrorPage from './components/ErrorPage/error404';
 import Header from './components/Header/Header';
-
+import NotionElement from './components/NotionElement/NotionElement';
 
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
@@ -74,10 +76,14 @@ const App = () => {
         scrollToContact={() => scrollToSection(contactRef)}  />
 
           <Routes>
-            <Route path="/" element={<Home scrollToSection={scrollToSection} projectsRef={projectsRef} skillsRef={skillsRef} contactRef={contactRef} />} />
+            <Route path="blog/:blogSlug" element={<NotionElement  />} />
             <Route path="research" element={<Research />} />
             <Route path="portfolio" element={<Portfolio />} />
+            
+            <Route path="/" element={<Home scrollToSection={scrollToSection} projectsRef={projectsRef} skillsRef={skillsRef} contactRef={contactRef} />} />
+            
             <Route path="/*" element={<ErrorPage />} />
+            
           </Routes>
         <ScrollToTop scrollToTop={()=>scrollToSection(scrollRef)}/>
         </div>

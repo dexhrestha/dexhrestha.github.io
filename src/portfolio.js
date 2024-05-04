@@ -24,6 +24,7 @@ const projects = [
   {
     name: 'AirBnb Analytics',
     src: 'projects/airbnb.svg',
+    blog: '#/blog/28e26135d87b4a0db9fd701312c95eb3',
     description:
       'What type of property is popular?',
     stack: ['ML','Python','Pytorch','Logisitc Regression'],

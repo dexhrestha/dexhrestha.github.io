@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import './ScrollToTop.css'
 import { NavLink } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ const ScrollToTop = ({scrollToTop}) => {
 
   return isVisible ? (
     <div className='scroll-top'>
-      <NavLink to="/#top">
+      <NavLink to="#top">
       ‎ <ArrowUpwardIcon onClick={scrollToTop} fontSize='large' />
       </NavLink>
     </div>

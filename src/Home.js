@@ -1,10 +1,7 @@
-import { useState,useEffect,useContext, useRef } from 'react'
-import { ThemeContext } from './contexts/theme'
-import Header from './components/Header/Header'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
-import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+
 import Contact from './components/Contact/Contact'
 import Certifications from './components/Certifications/Certifications'
 import Footer from './components/Footer/Footer'

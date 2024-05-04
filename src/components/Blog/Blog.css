@@ -1,0 +1,13 @@
+
+.v_center {
+  align-items: center;
+  justify-content: center;
+  top: 2em;
+}
+
+section .contact{
+  margin: 0;
+}
+.section__title{
+  margin: 1em;
+}

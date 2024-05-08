@@ -114,3 +114,11 @@
     
   }
 }
+
+.card__title_link{
+  color: var(--clr-fg);
+}
+
+.card__title_link:hover{
+  color: var(--clr-fg-alt);
+}

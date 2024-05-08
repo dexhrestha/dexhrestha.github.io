@@ -77,6 +77,7 @@ const App = () => {
 
           <Routes>
             <Route path="blog/:blogSlug" element={<NotionElement  />} />
+            
             <Route path="research" element={<Research />} />
             <Route path="portfolio" element={<Portfolio />} />
             

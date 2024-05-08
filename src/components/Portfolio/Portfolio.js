@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import './Portfolio.css'; // Import the CSS file
 import uniqid from 'uniqid';
-import { useContext } from 'react'
+import { useContext,useState,useEffect } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 
 import ScrollToTop from '../ScrollToTop/ScrollToTop'
@@ -15,15 +15,31 @@ import { projects } from '../../portfolio';
 const Portfolio = () => {
   const [{ themeName }] = useContext(ThemeContext)
 
-    const stackSet = new Set();
+  const stackSet = new Set();
   projects.forEach((project) => {
     project.stack.forEach((technology) => {
       stackSet.add({ name: technology });
     });
   });
 
-  // Convert set to array for easier manipulation
-  const stackArray = Array.from(stackSet);
+  const [projectsData,setProjectsData] = useState(null);
+
+  useEffect(()=>{
+    const fetchData = async ()=>{
+    try {
+      // const response = await fetch(`https://notion-api.splitbee.io/v1/page/${blogSlug}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_projects`)
+      const data = await response.json();  
+      setProjectsData(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+},[])
+
+
   
   return (
     <div id='top' className={`${themeName} app`}>
@@ -39,7 +55,12 @@ const Portfolio = () => {
         <section  className="rightRow center">
         <h2 className='section__title'>Portfolio</h2>
           <Skills skills={[...stackSet]} header={false} filter/>
-          {projects.map((project) => (<ProjectContainer key={uniqid()} project={project} className="research__center"/>))}
+                {projectsData ? (
+        projectsData.map((project) => (
+          <ProjectContainer key={uniqid()} project={project} className="research__center" />
+        ))
+      ) : null}
+        
           <Contact />
         </section>
 

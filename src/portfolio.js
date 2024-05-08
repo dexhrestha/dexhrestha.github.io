@@ -23,7 +23,7 @@ const projects = [
   // if there are no projects, Projects section won't show up
   {
     name: 'AirBnb Analytics',
-    src: 'projects/airbnb.svg',
+    src: 'projlects/airbnb.svg',
     blog: '#/blog/28e26135d87b4a0db9fd701312c95eb3',
     description:
       'What type of property is popular?',

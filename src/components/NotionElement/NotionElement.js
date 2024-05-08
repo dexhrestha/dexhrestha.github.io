@@ -23,7 +23,7 @@ const NotionElement = () => {
     const fetchData = async () => {
       try {
         // const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/page/${blogSlug}`);
-        const response = await fetch(`http://127.0.0.1:3001/page/${blogSlug}`);
+        const response = await fetch(`${process.env.REACT_APP_NOTION_URL}/page/${blogSlug}`);
         const data = await response.json();   
         setRecordMap(data);
       } catch (error) {
@@ -42,11 +42,9 @@ const NotionElement = () => {
       {Object.keys(recordMap).length > 0 && (
         <NotionRenderer
         recordMap={recordMap}
-
           darkmode
-          fullPage={false}
-          hideHeader
-          showTableOfContents
+          fullPage
+          
           components = {{
             Code,Equation
           }}

@@ -3,7 +3,6 @@ import {Container,Row,Col} from 'react-bootstrap'
 
 import { ThemeContext } from '../../contexts/theme'
 
-import Header from "../Header/Header";
 import '../../App.css'
 
 

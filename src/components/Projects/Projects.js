@@ -2,6 +2,7 @@ import uniqid from 'uniqid'
 import ProjectContainer from '../ProjectContainer/ProjectContainer'
 import './Projects.css'
 import { useEffect, useState } from 'react'
+import { CircularProgress } from '@mui/material'
 
 
 
@@ -38,7 +39,7 @@ const Projects = ({projectsRef}) => {
         ))}
       </div>
     </section>
-    :<p>Loading...</p>)
+    :<div className='center'><CircularProgress color='inherit' /></div>)
   )
 }
 

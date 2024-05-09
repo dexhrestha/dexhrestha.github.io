@@ -11,15 +11,15 @@
 .light {
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
+  --clr-fg: #777;
+  --clr-fg-alt: #555;
   --clr-primary: #2978b5;
   --profile-image:url('../public/profile_light.jpg');
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .dark {
-  --clr-bg: #121212;
+  --clr-bg: #373737;
   --clr-bg-alt: #323232;
   --clr-fg: #ffffff;
   --clr-fg-alt: #f4f4f4;

@@ -6,7 +6,7 @@ import './ProjectContainer.css';
 const ProjectContainer = ({ project }) => (
   <div className="project">
     <div className="inner-part">
-      <span className="img">
+        <span className="img">
         <img id="sample" className="img-1" src={project.img_src?project.img_src:"projects/sample.png"} alt="Sales Dashboard" />
         <a href={project.blog_url}><div className="title-overlay">{project.name}</div></a> {/* Title overlay */}
       </span>

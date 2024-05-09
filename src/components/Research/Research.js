@@ -1,5 +1,5 @@
 
-import { Grid } from '@mui/material';
+import { CircularProgress, Grid } from '@mui/material';
 import './Research.css'; // Import the CSS file
 import uniqid from 'uniqid';
 import { useContext,useState,useEffect } from 'react'
@@ -54,7 +54,7 @@ const Research = () => {
     ))}
     <Contact />
   </section>
-) : null}
+) : <section className="rightRow center"><h2 className='section__title'>Research</h2><CircularProgress color='inherit' /></section>}
 
         </Grid>
       </Grid>

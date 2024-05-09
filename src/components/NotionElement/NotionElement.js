@@ -5,15 +5,15 @@ import { Code } from 'react-notion-x/build/third-party/code'
 import { Equation } from 'react-notion-x/build/third-party/equation'
 import { Collection } from 'react-notion-x/build/third-party/collection'
 
-import './NotionElement.css'
 
-// core styles shared by all of react-notion-x (required)
-import 'prismjs/components/prism-python.js';
+
+import 'prismjs/themes/prism-tomorrow.css'
 
 import 'react-notion-x/src/styles.css';
 
-// used for rendering equations (optional)
 import 'katex/dist/katex.min.css';
+
+import './NotionElement.css'
 
 const NotionElement = () => {
   const [recordMap, setRecordMap] = useState({});
@@ -34,19 +34,58 @@ const NotionElement = () => {
     fetchData();
   }, [blogSlug]); // Include blogSlug in dependency array to refetch data when it changes
 
+  
+    useEffect(() => {
+      // Add event listeners to all <a> tags with the 'notion-link' class
+      const notionLinks = document.querySelectorAll('a');
+      notionLinks.forEach(link => {
+        link.addEventListener('click', handleLinkClick);
+      });
+  
+      // Cleanup function to remove event listeners when component unmounts
+      return () => {
+        notionLinks.forEach(link => {
+          link.removeEventListener('click', handleLinkClick);
+        });
+      };
+    }, [recordMap]); // Run only once on component mount
+    
 
-    console.log(recordMap)
+    const handleLinkClick = (event) => {
+      event.preventDefault(); // Prevent the default anchor tag behavior (i.e., navigating to a new page)
+
+      // Get the href attribute of the clicked anchor tag
+      const href = event.target.getAttribute('href');
+
+      // Check if the href attribute starts with '#' (indicating it's an internal link)
+      if (href && href.startsWith('#')) {
+        // Extract the ID from the href attribute (excluding the '#')
+        const targetId = href.substring(1);
+
+        // Find the target element with the corresponding ID
+        const targetElement = document.getElementById(targetId);
+
+        // Scroll to the target element smoothly
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
 
   return (
     <div className = "notion__full_page">
       {Object.keys(recordMap).length > 0 && (
         <NotionRenderer
+        className="notion__page"
         recordMap={recordMap}
-          darkmode
+          showTableOfContents
           fullPage
-          
+          hideBlockId
+          darkMode
+          showCollectionViewDropdown={false}
           components = {{
-            Code,Equation
+            Code,Equation,Collection
           }}
         />
       )}

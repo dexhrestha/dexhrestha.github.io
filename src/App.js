@@ -31,6 +31,7 @@ const App = () => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  fetch(`${process.env.REACT_APP_NOTION_URL}`)
 
   useEffect(() => {
     // Simulating loading time
@@ -66,7 +67,6 @@ const App = () => {
       <div className="center_loading">
           <img src="logo192.png" alt="Loading..." className="heartbeat" />
       </div>      ) : (
-   
      
             
       <Router>
@@ -77,7 +77,6 @@ const App = () => {
 
           <Routes>
             <Route path="blog/:blogSlug" element={<NotionElement  />} />
-            
             <Route path="research" element={<Research />} />
             <Route path="portfolio" element={<Portfolio />} />
             

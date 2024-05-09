@@ -11,6 +11,7 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import AboutMin from '../About/AboutMin';
 import Skills from '../Skills/Skills';
 import { projects } from '../../portfolio';
+import {CircularProgress} from '@mui/material';
 
 const Portfolio = () => {
   const [{ themeName }] = useContext(ThemeContext)
@@ -59,7 +60,7 @@ const Portfolio = () => {
         projectsData.map((project) => (
           <ProjectContainer key={uniqid()} project={project} className="research__center" />
         ))
-      ) : null}
+      ) : <CircularProgress color='inherit' />}
         
           <Contact />
         </section>

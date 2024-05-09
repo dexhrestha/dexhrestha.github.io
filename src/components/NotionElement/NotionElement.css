@@ -2,3 +2,32 @@
     height: 100vh;
     width: 100%;
 }
+
+
+.notion__page{
+    color: var(--clr-fg);
+    background-color: var(--clr-bg);
+}
+
+.notion-header{
+    display: none;
+
+}
+
+.notion-collection-page-properties{
+    display: none;
+}
+.notion-aside-table-of-contents{
+    background-color: var(--clr-bg-alt);
+}
+
+.notion-aside-table-of-contents-header{
+   color: var(--clr-fg);
+}
+
+.notion-table-of-contents-item-body{
+    color: var(--clr-fg-alt);
+}
+.notion-equation-block{
+    align-items: center;
+}

@@ -14,6 +14,7 @@ import 'react-notion-x/src/styles.css';
 import 'katex/dist/katex.min.css';
 
 import './NotionElement.css'
+import { CircularProgress } from "@mui/material";
 
 const NotionElement = () => {
   const [recordMap, setRecordMap] = useState({});
@@ -30,7 +31,7 @@ const NotionElement = () => {
         console.error('Error fetching data:', error);
       }
     };
-
+    
     fetchData();
   }, [blogSlug]); // Include blogSlug in dependency array to refetch data when it changes
 
@@ -76,7 +77,7 @@ const NotionElement = () => {
 
   return (
     <div className = "notion__full_page">
-      {Object.keys(recordMap).length > 0 && (
+      {Object.keys(recordMap).length > 0 ? (
         <NotionRenderer
         className="notion__page"
         recordMap={recordMap}
@@ -89,7 +90,7 @@ const NotionElement = () => {
             Code,Equation,Collection
           }}
         />
-      )}
+      ):<div className='center'><CircularProgress color='inherit' /></div>}
     </div>
   );
 };

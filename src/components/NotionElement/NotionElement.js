@@ -75,24 +75,23 @@ const NotionElement = () => {
     };
 
 
-  return (
-    <div className = "notion__full_page">
-      {Object.keys(recordMap).length > 0 ? (
+    return Object.keys(recordMap).length > 0 ? (
+      <div className="notion__full_page">
         <NotionRenderer
-        className="notion__page"
-        recordMap={recordMap}
+          className="notion__page"
+          recordMap={recordMap}
           showTableOfContents
           fullPage
           hideBlockId
           darkMode
           showCollectionViewDropdown={false}
-          components = {{
-            Code,Equation,Collection
-          }}
+          components={{ Code, Equation, Collection }}
         />
-      ):<div className='center'><CircularProgress color='inherit' /></div>}
-    </div>
-  );
-};
+      </div>
+    ) : (
+      <div className="center">
+        <CircularProgress color="inherit" />
+      </div>
+    );};
 
 export default NotionElement;

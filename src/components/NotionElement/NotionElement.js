@@ -39,7 +39,6 @@ const NotionElement = () => {
     useEffect(() => {
       // Add event listeners to all <a> tags with the 'notion-link' class
       const notionLinks = document.querySelectorAll('.notion a');
-      console.log(notionLinks)
       notionLinks.forEach(link => {
         link.addEventListener('click', handleLinkClick);
       });

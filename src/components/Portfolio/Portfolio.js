@@ -15,23 +15,21 @@ import {CircularProgress} from '@mui/material';
 
 const Portfolio = () => {
   const [{ themeName }] = useContext(ThemeContext)
-
-  const stackSet = new Set();
-  projects.forEach((project) => {
-    project.stack.forEach((technology) => {
-      stackSet.add({ name: technology });
-    });
-  });
-
   const [projectsData,setProjectsData] = useState(null);
+  const [stackArray, setStackArray] = useState([]);
+
 
   useEffect(()=>{
     const fetchData = async ()=>{
     try {
-      // const response = await fetch(`https://notion-api.splitbee.io/v1/page/${blogSlug}`);
+      const topics = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_topics/project`)
+      const topics_data = await topics.json();  
+      setStackArray(topics_data);
+
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_projects`)
       const data = await response.json();  
       setProjectsData(data);
+
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -55,7 +53,8 @@ const Portfolio = () => {
         <Grid item xs >
         <section  className="rightRow center">
         <h2 className='section__title'>Portfolio</h2>
-          <Skills skills={[...stackSet]} header={false} filter/>
+        {stackArray?<Skills skills={[...stackArray]} header={false} filter/>:null}
+        {/* {stackArray?console.log(stackArray):null} */}
                 {projectsData ? (
         projectsData.map((project) => (
           <ProjectContainer key={uniqid()} project={project} className="research__center" />

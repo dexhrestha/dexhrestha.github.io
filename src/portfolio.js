@@ -18,6 +18,11 @@ const about = {
   },
 };
 
+
+const blogs = [
+  {name:'Blog 1'},
+  {name: 'Blog 2'}
+]
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
@@ -86,5 +91,5 @@ const certifications = [
   
 ];
 
-export { header, about, projects, skills, contact, certifications }
+export { header, about, blogs, projects, skills, contact, certifications }
 

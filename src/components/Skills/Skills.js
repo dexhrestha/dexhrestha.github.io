@@ -7,7 +7,11 @@ const Skills = ({skills,header,filter,skillsRef}) => {
   if (!skills.length) return null
 
   return (
-    <section className='section skills' id='skills' ref={skillsRef}>
+    <section
+    className={`section skills ${filter ? '' : 'bordered'}`}
+    id='skills'
+    ref={skillsRef}
+  >
 
       {header ? (
               <>

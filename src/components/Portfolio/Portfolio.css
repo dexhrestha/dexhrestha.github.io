@@ -5,7 +5,7 @@
     /* bottom: 10px; */
     width: 27%; /* Adjust as needed */
     height: 90vh; /* Adjust as needed */
-    background-color: var(--clr-bg);
+    /* background-color: var(--clr-bg); */
     padding: 16px; /* Material-UI spacing unit */
     overflow: hidden;
     border-right: 2px solid var(--clr-fg);

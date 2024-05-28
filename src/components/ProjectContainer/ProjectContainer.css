@@ -5,7 +5,6 @@
   max-width: 900px;
   margin: 2em auto;
   border-radius: 25px;
-  background: var(--clr-bg);
   box-shadow: var(--shadow);
   text-align: center;
   transition: transform 0.2s linear;

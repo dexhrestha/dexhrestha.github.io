@@ -1,7 +1,6 @@
 .certification__card {
   width: auto; /* Adjust the width as needed */
   height: 250px; /* Adjust the height as needed */
-  background-color: var(--clr-bg);
   border-radius: 10px;
   box-shadow: var(--shadow);
   overflow: hidden;

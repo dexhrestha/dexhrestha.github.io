@@ -1,0 +1,25 @@
+a.blogs__grid {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid; /* Changed from 'flexbox' to 'grid' */
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 5em;
+}
+
+.blogs {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blogs .section__title {
+  margin: 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .blogs__grid {
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr)); /* Adjusted column width for smaller screens */
+    grid-gap: 2em; /* Reduced grid gap for smaller screens */
+  }
+}

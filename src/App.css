@@ -2,13 +2,17 @@
 
 
 .app {
-  font-family: 'Poppins', sans-serif , 'Font Awesome 5 Free';
+  font-family: 'Poppins', sans-serif, 'Font Awesome 5 Free';
   line-height: 1.5;
   color: var(--clr-fg);
-  background-color: var(--clr-bg);
+  background: var(--blur-bg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .light {
+  --blur-bg: url('../public/bg-light.avif');
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
   --clr-fg: #777;
@@ -19,6 +23,7 @@
 }
 
 .dark {
+  --blur-bg: url('../public/bg-dark.jpeg');
   --clr-bg: #373737;
   --clr-bg-alt: #323232;
   --clr-fg: #ffffff;
@@ -35,9 +40,20 @@ main {
   margin: 0 auto;
 }
 
+
 .section {
-  margin-top: 5em;
-  padding: 2em;
+  margin-top: 3em;
+  padding: 1em;
+  backdrop-filter: blur(10px); /* Adjust the blur radius */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.bordered{
+  border-radius: 20px;
+  backdrop-filter: blur(10px); /* Blur effect for the frosted glass look */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  /* border: 1px solid rgba(255, 255, 255, 0.3); Optional: A subtle border to enhance the frosted effect */
+  box-shadow: var(--shadow); 
 }
 
 .section__title {

@@ -17,7 +17,7 @@ const About = () => {
   ]
 
   return (
-    <section className='about center'>
+    <section className='about center bordered'>
 
       <div className = 'about__image'/>
       {name && (

@@ -1,9 +1,7 @@
 .timeline {
-  --background: #0a0f2b;
   --accent: var(--clr-primary);
   --text: var(--clr-fg);
   --line: var(--clr-primary);
-  background: var(--clr-bg);
   color: var(--text);
   padding: 30px auto;
 }

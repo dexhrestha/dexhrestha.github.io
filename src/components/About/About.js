@@ -11,13 +11,13 @@ const About = () => {
   const { name, role, description, resume, social } = about
   const roles = [
     '  Data Scientist',
-    '  Data Enginner',
+    '  Data Engineer',
     '  Software Engineer',
     '  Data Analyst',
   ]
 
   return (
-    <div className='about center'>
+    <section className='about center'>
 
       <div className = 'about__image'/>
       {name && (
@@ -81,7 +81,7 @@ const About = () => {
           </>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

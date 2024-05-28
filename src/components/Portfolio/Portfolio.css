@@ -22,7 +22,7 @@
     padding: 16px; /* Material-UI spacing unit */
     height: auto;
     width: auto;
-    max-width: 100vh;
+    max-width: 100vw;
     display: flex; /* Ensure elements inside rightRow use flex layout */
     flex-direction: column; /* Arrange elements vertically */
   }

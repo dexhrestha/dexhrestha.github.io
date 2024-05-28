@@ -1,8 +1,8 @@
 .project {
   position: relative; /* Add position relative for absolute positioning */
   height: auto; /* Change to auto to accommodate varying content */
-  width: 95vw;
-  max-width: 850px;
+  width: auto;
+  max-width: 900px;
   margin: 2em auto;
   border-radius: 25px;
   background: var(--clr-bg);

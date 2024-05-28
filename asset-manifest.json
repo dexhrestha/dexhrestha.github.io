@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.de50371b.css",
-    "main.js": "/static/js/main.e3f6d839.js",
+    "main.css": "/static/css/main.8b63dd17.css",
+    "main.js": "/static/js/main.0536b178.js",
     "static/media/profile_light.jpg": "/static/media/profile_light.9cc3d1bafd97fbb83d94.jpg",
+    "static/media/bg-dark.jpeg": "/static/media/bg-dark.f3ecab251d150b0127f1.jpeg",
     "static/media/profile_dark.jpg": "/static/media/profile_dark.e267e30bd072b0c8c0b9.jpg",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -56,6 +57,7 @@
     "static/media/KaTeX_Size3-Regular.ttf": "/static/media/KaTeX_Size3-Regular.8d6b6822586eea3d3b20.ttf",
     "static/media/KaTeX_Caligraphic-Bold.woff2": "/static/media/KaTeX_Caligraphic-Bold.a1abf90dfd72792a577a.woff2",
     "static/media/KaTeX_Caligraphic-Regular.woff2": "/static/media/KaTeX_Caligraphic-Regular.d6484fce1ef428d5bd94.woff2",
+    "static/media/bg-light.avif": "/static/media/bg-light.a09929ce2cd1343b312b.avif",
     "static/media/KaTeX_Size1-Regular.woff": "/static/media/KaTeX_Size1-Regular.0108e89c9003e8c14ea3.woff",
     "static/media/KaTeX_Size2-Regular.woff": "/static/media/KaTeX_Size2-Regular.3a99e70aee4076660d38.woff",
     "static/media/KaTeX_Size4-Regular.woff": "/static/media/KaTeX_Size4-Regular.aeffd8025cba3647f1a6.woff",
@@ -65,11 +67,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.de50371b.css.map": "/static/css/main.de50371b.css.map",
-    "main.e3f6d839.js.map": "/static/js/main.e3f6d839.js.map"
+    "main.8b63dd17.css.map": "/static/css/main.8b63dd17.css.map",
+    "main.0536b178.js.map": "/static/js/main.0536b178.js.map"
   },
   "entrypoints": [
-    "static/css/main.de50371b.css",
-    "static/js/main.e3f6d839.js"
+    "static/css/main.8b63dd17.css",
+    "static/js/main.0536b178.js"
   ]
 }

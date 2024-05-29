@@ -1,7 +1,7 @@
 const timelineData = [
     {
       date: 'December 2020',
-      title: 'Nimble Clinical Publication',
+      title: 'Nimble Clinical Research',
       description: 'Software Engineer',
       link:'https://nimble-cr.com/',
     },

@@ -30,7 +30,7 @@ const Projects = ({projectsRef}) => {
   return (
     (projectsData?
     <section id='projects' ref={projectsRef} className='section projects bordered'>
-      <h2 className='section__title'>Recent PROJECTS</h2>
+      <h2 className='section__title'>Recent Projects</h2>
       <p> Crunching Numbers, Unveiling Stories: Your Data Odyssey Awaits! </p>
 
       <div className='projects__grid'>

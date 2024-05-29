@@ -24,7 +24,7 @@ const Publication = () => {
         const topics_data = await topics.json();
         setStackArray(topics_data);
 
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_publicationes`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_publications`);
         const data = await response.json();
         setPublicationData(data);
       } catch (error) {

@@ -79,7 +79,7 @@ const App = () => {
         scrollToBlogs={() => scrollToSection(blogsRef)}  />}
 
           <Routes>
-            <Route path="sblog/:blogSlug" element={<NotionElement  />} />
+            <Route path="blog/:blogSlug" element={<NotionElement  />} />
             <Route path="publication" element={<Publication />} />
             <Route path="portfolio" element={<Portfolio />} />
             

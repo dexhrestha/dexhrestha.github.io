@@ -31,7 +31,7 @@ const Blogs = ({blogsRef}) => {
     (blogsData?
     <section id='blogs' ref={blogsRef} className='section blogs bordered'>
       <h2 className='section__title'>Recent Blogs</h2>
-      <p> Writing </p>
+      <p> Adventures in Learning: Tales of Professional Growth </p>
 
       <div className='blogs__grid'>
         {blogsData.map((blog) => (

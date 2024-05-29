@@ -1,6 +1,9 @@
+import React, { useEffect, useState } from 'react';
+
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
+
 
 import Contact from './components/Contact/Contact'
 import Certifications from './components/Certifications/Certifications'
@@ -15,10 +18,20 @@ import timelineData from './components/Timeline/TimelineData'
 
 import { skills } from './portfolio'
 
-const Home = ({skillsRef,projectsRef,contactRef,blogsRef}) => (
+const Home = ({skillsRef,projectsRef,contactRef,blogsRef}) => {
+  const [loaded, setLoaded] = useState(false);
 
-    <div>
-      <main>
+  useEffect(() => {
+    // Simulate loading time
+    const timeout = setTimeout(() => {
+      setLoaded(true);
+    }, 20); // Adjust the timeout as needed
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+   return (<div >
+      <main className={`fade-in ${loaded ? 'loaded' : ''}`} >
         <About />
         <Timeline data={timelineData}/>
         <Skills skills={skills} skillsRef={skillsRef} header/>
@@ -28,7 +41,7 @@ const Home = ({skillsRef,projectsRef,contactRef,blogsRef}) => (
         <Contact contactRef={contactRef}/>
       </main>
       <Footer />
-    </div>
-);
+    </div>)
+};
 
 export default Home

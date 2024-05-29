@@ -12,7 +12,8 @@ import Header from './components/Header/Header';
 import NotionElement from './components/NotionElement/NotionElement';
 
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-
+import Loader from './components/Loader/Loader';
+import { about } from './portfolio';
 
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
-
+  const {name} = about;
 
   const [currentPage, setCurrentPage] = useState('');
 
@@ -63,10 +64,7 @@ const App = () => {
 
   return (
     
-    loading ? (
-      <div className="center_loading">
-          <img src="logo192.png" alt="Loading..." className="heartbeat" />
-      </div>      ) : (
+    
      
             
       <Router>
@@ -80,7 +78,7 @@ const App = () => {
             <Route path="research" element={<Research />} />
             <Route path="portfolio" element={<Portfolio />} />
             
-            <Route path="/" element={<Home scrollToSection={scrollToSection} projectsRef={projectsRef} skillsRef={skillsRef} contactRef={contactRef} />} />
+            <Route path="/" element={loading ? <Loader name = {name} /> : <Home loaded={!loading} scrollToSection={scrollToSection} projectsRef={projectsRef} skillsRef={skillsRef} contactRef={contactRef} />} />
             
             <Route path="/*" element={<ErrorPage />} />
             
@@ -90,7 +88,7 @@ const App = () => {
       </Router>
       
 
-    )
+    
   )
 };
 

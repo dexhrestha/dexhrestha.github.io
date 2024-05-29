@@ -35,22 +35,30 @@
 }
 
 main {
+  min-height: 1000px;
   max-width: 1400px;
   width: 95%;
   margin: 0 auto;
 }
 
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Adjust timing as needed */
+}
+
+.fade-in.loaded {
+  opacity: 1;
+}
+
 .section {
   margin-top: 3em;
   padding: 1em;
-  backdrop-filter: blur(10px); /* Adjust the blur radius */
   -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
 
 .bordered{
   border-radius: 20px;
-  backdrop-filter: blur(10px); /* Blur effect for the frosted glass look */
   -webkit-backdrop-filter: blur(10px); /* For Safari support */
   /* border: 1px solid rgba(255, 255, 255, 0.3); Optional: A subtle border to enhance the frosted effect */
   box-shadow: var(--shadow); 
@@ -66,20 +74,6 @@ main {
   display: flex;
   align-items: center;
 }
-
-.center_loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adjust as needed */
-}
-
-.heartbeat {
-  width: 50px;
-  height: 50px;
-  animation: heartbeat 1.5s infinite; /* Adjust animation duration as needed */
-}
-
 
 .link {
   color: var(--clr-primary);

@@ -1,0 +1,72 @@
+.center_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    color: var(--clr-fg);
+
+  }
+
+  .loader_text {
+    position: absolute;
+    top:10%;
+    transform: translate(0%);
+    animation: moveUp 8s linear backwards;
+  }
+  
+  .about__name.loading::before {
+    content: attr(data-name); /* Use data-name attribute as content */
+    /* background: linear-gradient(to right, transparent 0%, transparent 50%, #3498db 50%, #3498db 100%); */
+    animation: revealText 2.5s linear forwards; /* Animation to reveal the text */
+  }
+  
+  @keyframes revealText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+  }
+  
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(18em);
+    }
+  }
+
+
+@media (max-width: 600px) {
+.center_loading {
+    align-items: flex-start;
+    margin-top: 2em;
+    text-align: center;
+    justify-content: center;
+    }
+
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(32em);
+    }
+    }
+}
+   
+
+@media (max-width: 800px) {
+
+    @keyframes moveUp {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(32em);
+        }
+        }
+    }

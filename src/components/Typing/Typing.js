@@ -5,10 +5,10 @@ const useTypewriter = (texts, speed = 60) => {
   const [textIndex, setTextIndex] = useState(0);
 
   useEffect(() => {
-    let i = 0;
+    let i = (document.getElementById('typing').innerText.length > 0) ? document.getElementById('typing').innerText.length : 0;
     const typingInterval = setInterval(() => {
       if (i < texts[textIndex].length) {
-        setDisplayText(prevText => prevText + texts[textIndex].charAt(i));
+        setDisplayText(texts[textIndex].slice(0, i + 1));
         i++;
       } else {
         clearInterval(typingInterval);

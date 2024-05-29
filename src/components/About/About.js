@@ -21,13 +21,13 @@ const About = () => {
 
       <div className = 'about__image'/>
       {name && (
-        <h1>
+        <h1 id="myname">
           Hi, I am <span className='about__name'>{name}.</span>
         </h1>
       )}
 
       {/* {role && <h2 className='about__role'>A {role}.</h2>} */}
-      {role && <h2 className='about__role'>A <Typing className='typing' texts={roles}/></h2>}
+      {role && <h2 className='about__role' id ="typing">A <Typing className='typing' texts={roles}/></h2>}
       <p className='about__desc'>{description && description}</p>
 
       <div className='about__contact center'>

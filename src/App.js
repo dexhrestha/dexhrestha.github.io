@@ -5,7 +5,7 @@ import { ThemeContext } from './contexts/theme'
 
 
 import Home from './Home';
-import Research from './components/Research/Research';
+import Publication from './components/Publication/Publication';
 import Portfolio from './components/Portfolio/Portfolio';
 import ErrorPage from './components/ErrorPage/error404';
 import Header from './components/Header/Header';
@@ -22,6 +22,7 @@ const App = () => {
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
+  const blogsRef = useRef(null);
   const {name} = about;
 
   const [currentPage, setCurrentPage] = useState('');
@@ -44,6 +45,9 @@ const App = () => {
           break;
         case '#skills':
           scrollToSection(skillsRef);
+          break;
+        case '#blogs':
+          scrollToSection(blogsRef);
           break;
         case '#contact':
           scrollToSection(contactRef);
@@ -69,16 +73,17 @@ const App = () => {
             
       <Router>
          <div id='top' ref={scrollRef} className={`${themeName} app`}>
-        <Header currentPage={currentPage} scrollToProjects={() => scrollToSection(projectsRef)}
+         {loading ?null:<Header currentPage={currentPage} scrollToProjects={() => scrollToSection(projectsRef)}
         scrollToSkills={() => scrollToSection(skillsRef)}
-        scrollToContact={() => scrollToSection(contactRef)}  />
+        scrollToContact={() => scrollToSection(contactRef)}
+        scrollToBlogs={() => scrollToSection(blogsRef)}  />}
 
           <Routes>
-            <Route path="blog/:blogSlug" element={<NotionElement  />} />
-            <Route path="research" element={<Research />} />
+            <Route path="sblog/:blogSlug" element={<NotionElement  />} />
+            <Route path="publication" element={<Publication />} />
             <Route path="portfolio" element={<Portfolio />} />
             
-            <Route path="/" element={loading ? <Loader name = {name} /> : <Home loaded={!loading} scrollToSection={scrollToSection} projectsRef={projectsRef} skillsRef={skillsRef} contactRef={contactRef} />} />
+            <Route path="/" element={loading ? <Loader name = {name} /> : <Home loaded={!loading} scrollToSection={scrollToSection} projectsRef={projectsRef} skillsRef={skillsRef} contactRef={contactRef}   blogsRef={blogsRef}/>} />
             
             <Route path="/*" element={<ErrorPage />} />
             

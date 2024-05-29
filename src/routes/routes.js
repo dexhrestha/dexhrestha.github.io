@@ -3,7 +3,7 @@ import  App  from '../App';
 import Counter from  "../components/Counter/Counter"
 import ErrorPage from '../components/ErrorPage/error404';
 import Portfolio from '../components/Portfolio/Portfolio';
-import Research from '../components/Research/Research';
+import Publication from '../components/Publication/Publication';
 
 const router = createBrowserRouter([
     {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
       element: <Counter />
     },
     {
-      path:"/research",
-      element: <Research />
+      path:"/publication",
+      element: <Publication />
     },
     {
       path:"/portfolio",

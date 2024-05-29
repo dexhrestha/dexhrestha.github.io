@@ -1,1 +1,1 @@
-const pages = ["#/research",'#/portfolio']
+const pages = ["#/publication",'#/portfolio']

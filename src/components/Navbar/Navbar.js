@@ -8,13 +8,12 @@ import { ThemeContext } from '../../contexts/theme'
 import { projects,blogs, skills, contact } from '../../portfolio'
 import './Navbar.css'
 
-const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
+const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact,scrollToBlogs}) => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = (item) =>{
      setShowNavList(!showNavList)
-
      if (item==='projects'){
       scrollToProjects();
      }
@@ -24,9 +23,12 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
      if (item==='contact'){
       scrollToContact();
      }
+     if (item==='blogs'){
+      scrollToBlogs();
+     }
   }
 
-    const isHomePage =   window.location.hash === '' ||  window.location.hash === '#/'  ||  window.location.hash === '#/#projects'  ||  window.location.hash === '#/#skills'  ||  window.location.hash === '#/#contact' ;  
+    const isHomePage =   window.location.hash === '' ||  window.location.hash === '#/'  ||  window.location.hash === '#/#projects'  ||  window.location.hash === '#/#blogs' ||  window.location.hash === '#/#skills'  ||  window.location.hash === '#/#contact' ;  
     console.log(window.location)
   
   return (
@@ -56,6 +58,7 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
             </NavLink>
           </li>
         ) : null}
+
 
         {isHomePage && projects.length ? (
           <li className='nav__list-item'>
@@ -95,11 +98,11 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact}) => {
 
 
 <li className='nav__list-item'>
-          <Link to="/research"
+          <Link to="/publication"
             onClick={toggleNavList}
             className='link link--nav'
           >
-            Research
+            Publication
           </Link>
         </li>
 

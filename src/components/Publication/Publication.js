@@ -1,5 +1,5 @@
 import { CircularProgress, Grid } from '@mui/material';
-import './Research.css'; // Import the CSS file
+import './Publication.css'; // Import the CSS file
 import uniqid from 'uniqid';
 import { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../../contexts/theme';
@@ -11,22 +11,22 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer';
 import AboutMin from '../About/AboutMin';
 import Skills from '../Skills/Skills';
 
-const Research = () => {
+const Publication = () => {
   const [{ themeName }] = useContext(ThemeContext);
 
-  const [researchData, setResearchData] = useState(null);
+  const [publicationData, setPublicationData] = useState(null);
   const [stackArray, setStackArray] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const topics = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_topics/research`);
+        const topics = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_topics/publication`);
         const topics_data = await topics.json();
         setStackArray(topics_data);
 
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_researches`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_publicationes`);
         const data = await response.json();
-        setResearchData(data);
+        setPublicationData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -45,18 +45,18 @@ const Research = () => {
           </Grid>
           {/* Right Row */}
           <Grid item xs>
-            {researchData ? (
+            {publicationData ? (
               <section className="rightRow">
-                <h2 className='section__title'>Research</h2>
+                <h2 className='section__title'>Publication</h2>
                 {stackArray ? <Skills skills={[...stackArray]} header={false} filter /> : null}
-                {researchData.map((project) => (
-                  <ProjectContainer key={uniqid()} project={project} className="research__center" />
+                {publicationData.map((project) => (
+                  <ProjectContainer key={uniqid()} project={project} className="publication__center" />
                 ))}
                 <Contact />
               </section>
             ) : (
               <section className="rightRow center">
-                <h2 className='section__title'>Research</h2>
+                <h2 className='section__title'>Publication</h2>
                 <CircularProgress color='inherit' />
               </section>
             )}
@@ -69,4 +69,4 @@ const Research = () => {
   );
 };
 
-export default Research;
+export default Publication;

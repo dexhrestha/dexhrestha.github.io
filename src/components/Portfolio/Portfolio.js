@@ -57,7 +57,7 @@ const Portfolio = () => {
         {/* {stackArray?console.log(stackArray):null} */}
                 {projectsData ? (
         projectsData.map((project) => (
-          <ProjectContainer key={uniqid()} project={project} className="research__center" />
+          <ProjectContainer key={uniqid()} project={project} className="publication__center" />
         ))
       ) : <CircularProgress color='inherit' />}
         

@@ -23,6 +23,7 @@ const Home = ({skillsRef,projectsRef,contactRef,blogsRef}) => {
 
   useEffect(() => {
     // Simulate loading time
+    console.log('blogs')
     const timeout = setTimeout(() => {
       setLoaded(true);
     }, 20); // Adjust the timeout as needed

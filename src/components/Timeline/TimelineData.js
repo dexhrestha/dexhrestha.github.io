@@ -1,7 +1,7 @@
 const timelineData = [
     {
       date: 'December 2020',
-      title: 'Nimble Clinical Research',
+      title: 'Nimble Clinical Publication',
       description: 'Software Engineer',
       link:'https://nimble-cr.com/',
     },
@@ -15,7 +15,7 @@ const timelineData = [
       date: 'February 2023',
       title: 'University of Greenwich',
       description: 'Software Developer',
-      link:'https://www.gre.ac.uk/research/nusc'
+      link:'https://www.gre.ac.uk/publication/nusc'
     },
     {
       date: 'July 2023',

@@ -41,15 +41,25 @@ main {
   margin: 0 auto;
 }
 
-
-.fade-in {
+.fade-in:not(.about__name) {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Adjust timing as needed */
+  
+  animation: fadeInAnimation ease 3s;
+  animation-fill-mode: forwards;
+
 }
 
-.fade-in.loaded {
-  opacity: 1;
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
+
+
 
 .section {
   margin-top: 3em;

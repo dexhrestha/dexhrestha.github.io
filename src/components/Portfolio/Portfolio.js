@@ -62,6 +62,7 @@ const Portfolio = () => {
       ) : <CircularProgress color='inherit' />}
         
           <Contact />
+          <Footer />
         </section>
 
         
@@ -69,7 +70,7 @@ const Portfolio = () => {
       </Grid>
       </main>
       <ScrollToTop/>
-      <Footer />      
+        
     </div>
   );
 };

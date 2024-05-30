@@ -15,6 +15,8 @@ import 'katex/dist/katex.min.css';
 
 import './NotionElement.css'
 import { CircularProgress } from "@mui/material";
+import Footer from "../Footer/Footer";
+import Contact from "../Contact/Contact";
 
 const NotionElement = () => {
   const [recordMap, setRecordMap] = useState({});
@@ -75,7 +77,7 @@ const NotionElement = () => {
 
 
     return Object.keys(recordMap).length > 0 ? (
-      <div className="notion__full_page">
+      <div className="notion__full_page notion__element">
         <NotionRenderer
           className="notion__page"
           recordMap={recordMap}
@@ -86,6 +88,11 @@ const NotionElement = () => {
           showCollectionViewDropdown={false}
           components={{ Code, Equation, Collection }}
         />
+        <div class="footer-contact-container">
+          <Contact />
+          <Footer/>
+        </div>
+
       </div>
     ) : (
       <div className="center">

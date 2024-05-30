@@ -86,3 +86,28 @@ section .skills{
     width: 90%; /* Adjust width as needed */
   }
 }
+
+
+/* Styles for medium screens */
+@media (min-width: 600px) and (max-width: 1150px) {
+  .leftRow {
+    display: none; /* Hide the leftRow for medium screens */
+  }
+
+  .rightRow {
+    margin: 0; /* Remove margins */
+    padding: 16px; /* Material-UI spacing unit */
+    height: auto;
+    width: 100%; /* Take full width on medium screens */
+    max-width: 100vw;
+    display: flex; /* Ensure elements inside rightRow use flex layout */
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Align items to center */
+  }
+
+  .card {
+    margin-bottom: 16px; /* Material-UI spacing unit */
+    color: var(--clr-fg);
+    width: 90%; /* Adjust width as needed */
+  }
+}

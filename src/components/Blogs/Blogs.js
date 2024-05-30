@@ -15,7 +15,7 @@ const Blogs = ({blogsRef}) => {
     const fetchData = async ()=>{
     try {
       // const response = await fetch(`https://notion-api.splitbee.io/v1/page/${blogSlug}`);
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_projects/3`)
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_publications/3`)
       const data = await response.json();  
       setBlogsData(data);
     } catch (error) {

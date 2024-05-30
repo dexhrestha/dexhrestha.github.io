@@ -53,6 +53,7 @@ const Publication = () => {
                   <ProjectContainer key={uniqid()} project={project} className="publication__center" />
                 ))}
                 <Contact />
+                <Footer />
               </section>
             ) : (
               <section className="rightRow center">
@@ -64,7 +65,7 @@ const Publication = () => {
         </Grid>
       </main>
       <ScrollToTop />
-      <Footer />
+      
     </div>
   );
 };

@@ -31,3 +31,30 @@
 .notion-equation-block{
     align-items: center;
 }
+
+
+.footer-contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+  }
+  
+  .footer-contact-container .footer {
+    width: 100%; 
+    height: auto;
+    padding-top: 2px;
+    margin-top: 0;
+    max-height: none; 
+    background-color: var(--clr-bg);
+  }
+  
+  .footer-contact-container .contact {
+    width: 100%;
+    height: auto;
+    padding-top: 2px;
+    margin-top: 0;
+    max-height: none; 
+    background-color: var(--clr-bg);
+  }
+  

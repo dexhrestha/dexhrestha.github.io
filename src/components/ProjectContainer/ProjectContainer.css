@@ -29,6 +29,7 @@
   opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease;
 }
+
 /* Apply overlay hover effect only for small screens */
 @media screen and (max-width: 767px) {
   .project:hover .title-overlay {
@@ -37,6 +38,38 @@
 
   .project:hover .img img {
     filter: blur(5px);
+  }
+
+  .inner-part {
+    flex-direction: column; /* Stack the image and content vertically */
+  }
+
+  .content {
+    display: flex; /* Display content on small screens */
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center content */
+    padding: 0;
+    width: 100%;
+    margin: 1em auto 0 auto;
+  }
+
+  .content .interact {
+    display: flex; /* Ensure the interact buttons are displayed */
+    flex-direction: row; /* Arrange buttons in a row */
+    justify-content: center;
+    margin-top: 10px; /* Add some space above the buttons */
+    margin: 0;
+  }
+
+  .inner-part .img {
+    margin-bottom: 10px; /* Add space below the image */
+  }
+  .content .title {
+    display: none; /* Hide content by default */
+    
+  }
+  .content .text {
+    display: none; /* Hide content by default */
   }
 }
 
@@ -96,9 +129,6 @@
   text-align: justify;
 }
 
-.content {
-  display: none; /* Hide content by default */
-}
 
 @media screen and (min-width: 768px) {
   .content {
@@ -110,14 +140,13 @@
     margin: 1em auto;
     opacity: 1;
     transition: 0.6s;
-    
   }
 }
 
-.card__title_link{
+.card__title_link {
   color: var(--clr-fg);
 }
 
-.card__title_link:hover{
+.card__title_link:hover {
   color: var(--clr-fg-alt);
 }

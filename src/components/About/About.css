@@ -6,6 +6,11 @@
   margin-bottom: 6em;
 }
 
+#myname{
+  opacity: 1;
+  animation: none;
+}
+
 .about__image {
   width: 20em;
   height: 20em;

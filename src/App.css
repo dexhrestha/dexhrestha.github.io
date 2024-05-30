@@ -12,7 +12,7 @@
 }
 
 .light {
-  --blur-bg: url('../public/bg-light.avif');
+  --blur-bg: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
   --clr-fg: #777;

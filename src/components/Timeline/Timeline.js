@@ -2,7 +2,7 @@ import uniqid from 'uniqid'
 import './Timeline.css';
 
 const Timeline = ({ data }) => (
-    <section id='timeline' className='section timeline bordered'>
+    <section id='timeline' className='fade-in section timeline bordered'>
       <div className="timeline" style={{ '--items': data.length }}>
       <ul>
         {data.map((item, index) => (

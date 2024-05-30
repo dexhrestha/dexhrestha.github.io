@@ -29,13 +29,13 @@ const Projects = ({projectsRef}) => {
 
   return (
     (projectsData?
-    <section id='projects' ref={projectsRef} className='section projects bordered'>
+    <section id='projects' ref={projectsRef} className='fade-in section projects bordered'>
       <h2 className='section__title'>Recent Projects</h2>
       <p> Crunching Numbers, Unveiling Stories: Your Data Odyssey Awaits! </p>
 
       <div className='projects__grid'>
         {projectsData.map((project) => (
-          <ProjectContainer key={uniqid()} project={project} />
+          <ProjectContainer key={uniqid()} project={project}/>
         ))}
       </div>
     </section>

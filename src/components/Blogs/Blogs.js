@@ -4,9 +4,6 @@ import './Blogs.css'
 import { useEffect, useState } from 'react'
 import { CircularProgress } from '@mui/material'
 
-
-
-
 const Blogs = ({blogsRef}) => {
 
    const [blogsData,setBlogsData] = useState(null);

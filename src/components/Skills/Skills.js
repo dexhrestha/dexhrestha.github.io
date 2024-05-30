@@ -8,7 +8,7 @@ const Skills = ({skills,header,filter,skillsRef}) => {
 
   return (
     <section
-    className={`section skills ${filter ? '' : 'bordered'}`}
+    className={`section skills ${filter ? '' : 'fade-in bordered'}`}
     id='skills'
     ref={skillsRef}
   >

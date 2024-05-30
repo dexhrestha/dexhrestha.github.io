@@ -41,13 +41,53 @@ main {
   margin: 0 auto;
 }
 
-.fade-in:not(.about__name) {
+.fade-in{
   opacity: 0;
-  
   animation: fadeInAnimation ease 3s;
   animation-fill-mode: forwards;
 
 }
+
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
 
 @keyframes fadeInAnimation {
   0% {
@@ -58,7 +98,6 @@ main {
       opacity: 1;
   }
 }
-
 
 
 .section {
@@ -193,12 +232,6 @@ a span .btn{
 
 .btn--icon:active {
   transform: translateY(-5px);
-}
-
-@media (max-width: 600px) {
-  .section {
-    margin-top: 4em;
-  }
 }
 
 @keyframes heartbeat {

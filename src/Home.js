@@ -17,30 +17,25 @@ import timelineData from './components/Timeline/TimelineData'
 
 
 import { skills } from './portfolio'
+import Loader from './components/Loader/Loader';
+import {about} from './portfolio'
 
-const Home = ({skillsRef,projectsRef,contactRef,blogsRef}) => {
-  const [loaded, setLoaded] = useState(false);
+const Home = ({loaded,skillsRef,projectsRef,contactRef,blogsRef}) => {
 
-  useEffect(() => {
-    // Simulate loading time
-    console.log('blogs')
-    const timeout = setTimeout(() => {
-      setLoaded(true);
-    }, 20); // Adjust the timeout as needed
-
-    return () => clearTimeout(timeout);
-  }, []);
-
+  const {name} = about;
    return (<div >
-      <main className={`fade-in ${loaded ? 'loaded' : ''}`} >
-        <About />
-        <Timeline data={timelineData}/>
-        <Skills skills={skills} skillsRef={skillsRef} header/>
-        <Projects projectsRef={projectsRef}/>
-        <Blogs blogsRef={blogsRef}/>
-        <Certifications />
-        <Contact contactRef={contactRef}/>
-      </main>
+    {loaded?(
+      <main  >
+      <About loaded={loaded}/>
+      <Timeline data={timelineData}/>
+      <Skills skills={skills} skillsRef={skillsRef} header/>
+      <Projects projectsRef={projectsRef}/>
+      <Blogs blogsRef={blogsRef}/>
+      <Certifications />
+      <Contact contactRef={contactRef}/>
+    </main>
+    ):<Loader  name = {name}/>}
+      
       <Footer />
     </div>)
 };

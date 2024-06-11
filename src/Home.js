@@ -19,14 +19,16 @@ import timelineData from './components/Timeline/TimelineData'
 import { skills } from './portfolio'
 import Loader from './components/Loader/Loader';
 import {about} from './portfolio'
+import Duties from './components/Duties/Duties';
 
 const Home = ({loaded,skillsRef,projectsRef,contactRef,blogsRef}) => {
 
   const {name} = about;
-   return (<div >
+   return (<div className='body_content'>
     {loaded?(
       <main  >
       <About loaded={loaded}/>
+      <Duties />
       <Timeline data={timelineData}/>
       <Skills skills={skills} skillsRef={skillsRef} header/>
       <Projects projectsRef={projectsRef}/>

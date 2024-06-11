@@ -13,11 +13,11 @@ const AboutMin = () => {
 
       <div className = 'about__image_min'/>
       {name && (
-        <h5>
+        <h2>
           Hi, I am <span className='about__name'>{name}.</span>
-        </h5>
+        </h2>
       )}
-      <p className='about__desc'>{description && description}</p>
+      <p className='about__desc_min'>{description && description}</p>
 
       <div className='about__contact center'>
         {social && (

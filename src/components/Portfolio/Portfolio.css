@@ -3,7 +3,7 @@
 .leftRow {
     position: fixed;
     left: 0;
-    /* bottom: 10px; */
+    bottom: 3em;
     width: 27%; /* Adjust as needed */
     height: 95vh; /* Adjust as needed */
     /* background-color: var(--clr-bg); */
@@ -19,6 +19,7 @@
   }
   
   .rightRow {
+    padding-top: 200px;
     margin-left: 25%; /* Match the width of leftRow */
     padding: 16px; /* Material-UI spacing unit */
     height: auto;
@@ -55,7 +56,8 @@ section .skills{
 
 /* Common styles for both small and large screens */
 .section__title {
-  margin: 1em;
+  margin-bottom: 0.3em;
+  padding-top: 1em;
 }
 
 .list__text {

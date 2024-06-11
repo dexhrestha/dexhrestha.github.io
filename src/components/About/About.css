@@ -1,9 +1,8 @@
 .about {
   flex-direction: column;
   position: relative;
-  top: 2.8em;
   padding: 2em;
-  margin-bottom: 6em;
+  /* background-color: red; */
 }
 
 #myname{
@@ -49,9 +48,15 @@
   
 }
 
-.about__desc {
+.about__desc{
+  font-size: 1.1rem;
+  max-width: 800px;
+  justify-content: center;
+}
+
+.about__desc_min {
   font-size: 1rem;
-  max-width: 600px;
+  justify-content: center;
 }
 
 .about__desc,

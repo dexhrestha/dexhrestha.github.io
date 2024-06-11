@@ -1,0 +1,61 @@
+.key-duties {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    padding: 30px auto;
+    margin-top: 20px;
+   
+  }
+  
+  .key-duty {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    padding: 20px;
+    /* background-color: var(--clr-bg); */
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: 0 10px;
+    transition: transform 0.3s ease; 
+  }
+  
+  .key-duty h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--clr-primary);
+  }
+  
+  .key-duty p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+
+
+  #clean:hover{
+    transform: translateY(-7px);
+    background: url('../../../public/gifs/clean.gif') center top/cover no-repeat;
+    /* background-position: center calc(85% + 80px); */
+    background-size:cover;
+    background-repeat: no-repeat;
+   
+    
+}
+
+
+  #analyze:hover{
+    transform: translateY(-7px);
+    background: url('../../../public/gifs/analyze.gif') center top/cover no-repeat;
+    background-position: center calc(75% + 80px);
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+  
+
+  #visualize:hover{
+    transform: translateY(-7px);
+    background: url('../../../public/gifs/viz.gif') center top/cover no-repeat;;
+    background-position: center calc(85% + 100px);
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+  }

@@ -62,7 +62,9 @@ const App = () => {
 
   return (
     <Router>
-      <div id='top' ref={scrollRef} className={`${themeName} app`}>
+      <div  className={`${themeName} app`}>
+        <div id='top' ref={scrollRef} className="top_content">
+
         {loaded ?  <Header
           currentPage={currentPage}
           scrollToProjects={() => scrollToSection(projectsRef)}
@@ -88,6 +90,7 @@ const App = () => {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <ScrollToTop scrollToTop={() => scrollToSection(scrollRef)} />
+      </div>
       </div>
     </Router>
   );

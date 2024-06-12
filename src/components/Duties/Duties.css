@@ -1,61 +1,108 @@
 .key-duties {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    padding: 30px auto;
-    margin-top: 20px;
-   
-  }
-  
-  .key-duty {
-    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
-    padding: 20px;
-    /* background-color: var(--clr-bg); */
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    margin: 0 10px;
-    transition: transform 0.3s ease; 
-  }
-  
-  .key-duty h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--clr-primary);
-  }
-  
-  .key-duty p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #666;
-  }
-  
-
-
-  #clean:hover{
-    transform: translateY(-7px);
-    background: url('../../../public/gifs/clean.gif') center top/cover no-repeat;
-    /* background-position: center calc(85% + 80px); */
-    background-size:cover;
-    background-repeat: no-repeat;
-   
-    
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  padding: 30px auto;
+  margin-top: 20px;
 }
 
+.key-duty {
+  flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 0 10px;
+  transition: transform 0.3s ease; 
+}
 
-  #analyze:hover{
-    transform: translateY(-7px);
-    background: url('../../../public/gifs/analyze.gif') center top/cover no-repeat;
-    background-position: center calc(75% + 80px);
-    background-size:cover;
-    background-repeat: no-repeat;
-  }
-  
+.key-duty h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--clr-primary);
+}
 
-  #visualize:hover{
-    transform: translateY(-7px);
-    background: url('../../../public/gifs/viz.gif') center top/cover no-repeat;;
-    background-position: center calc(85% + 100px);
-    background-size:cover;
-    background-repeat: no-repeat;
-    
+.key-duty p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+#clean:hover {
+  transform: translateY(-7px);
+  background: url('../../../public/gifs/clean.gif') center top/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#analyze:hover {
+  transform: translateY(-7px);
+  background: url('../../../public/gifs/analyze.gif') center top/cover no-repeat;
+  background-position: center calc(75%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#analyze:hover p {
+  color: whitesmoke;
+}
+
+#visualize:hover {
+  transform: translateY(-7px);
+  background: url('../../../public/gifs/viz.gif') center top/cover no-repeat;
+  background-position: center calc(75%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#visualize:hover p {
+  color: whitesmoke;
+}
+
+/* Media Queries */
+
+/* Small screens (phones, less than 600px) */
+@media (max-width: 600px) {
+  .key-duty {
+      flex: 1 1 100%; /* Take full width on small screens */
+      margin: 10px 0; /* Add margin between items */
   }
+
+  .key-duty h2 {
+      font-size: 1.2rem;
+  }
+
+  .key-duty p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Medium screens (tablets, 600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+  .key-duty {
+      flex: 1 1 45%; /* Take 45% width on medium screens */
+      margin: 10px 5px; /* Adjust margin for better spacing */
+  }
+
+  .key-duty h2 {
+      font-size: 1.3rem;
+  }
+
+  .key-duty p {
+      font-size: 1rem;
+  }
+}
+
+/* Large screens (desktops, more than 992px) */
+@media (min-width: 992px) {
+  .key-duty {
+      flex: 1 1 30%; /* Default style for large screens */
+  }
+
+  .key-duty h2 {
+      font-size: 1.5rem;
+  }
+
+  .key-duty p {
+      font-size: 1rem;
+  }
+}

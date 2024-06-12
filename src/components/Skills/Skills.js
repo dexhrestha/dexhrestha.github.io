@@ -1,61 +1,59 @@
-import uniqid from 'uniqid'
+import React from 'react';
+import uniqid from 'uniqid';
+import './Skills.css';
 
-import './Skills.css'
-import { Link } from 'react-router-dom'
+const calculateRotation = (percentage) => {
+  return 1.8 * percentage; // 1.8 degrees per percentage point for a semi-circle (180 degrees max)
+};
+const colors = {
+  "1": "#attr(color)",
+  "2": "#e74c3c",
+  "3": "#f39c12",
+  "4": "#9b59b6",
+  "5": "#2ecc71"
+};
 
-const Skills = ({skills,header,filter,skillsRef}) => {
-  if (!skills.length) return null
+const Skills = ({ skills, header, filter, skillsRef }) => {
+  if (!skills.length) return null;
 
   return (
     <section
-    className={`section skills ${filter ? '' : 'fade-in bordered'}`}
-    id='skills'
-    ref={skillsRef}
-  >
-
+      className={`skills ${filter ? '' : 'fade-in bordered'}`}
+      id='skills'
+      ref={skillsRef}
+    >
       {header ? (
-              <>
-                <h2 className='section__title'>Skills</h2>
-                <p>Mastering the Craft, Unraveling Data Spells</p>
-              </>
-            ) : null}
+        <>
+          <h2 className='skills__title'>SKILLS</h2>
+          <p className='skills__subtitle'>Mastering the Craft, Unraveling Data Spells</p>
+        </>
+      ) : null}
       <ul className='skills__list'>
-      <li key={uniqid()} className='skills__list-item'>
-      {filter ?(
-          
-        <Link to="/portfolio">
-                <span type='button' className='btn btn--outline'>
-              All
-            </span>
-                    
-                </Link>):null}</li>
-
         {skills.map((skill) => (
           <li key={uniqid()} className='skills__list-item'>
-            
-
-            {
-            skill.link ? (
-                
-              <a href={skill.link}>
-                <span type='button' className='btn btn--plain'>
-              {skill.name}
-            </span>
-                    
-                </a>
-                
-                ) : (
-                  <span type='button' className='btn btn--plain'>
-                  {skill.name}
-                </span>
+            <section className={`model-${skill.model}`}>
+              <div className='graph'>
+                <p className='graph__title'>{skill.label}</p>
+                {!skill.multiGraph && (
+                  <>
+                    <div
+                      className={`graph__segment skill-level-${skill.level}`}
+                      
+                      style={{borderColor:colors[skill.level], transform: `rotate(${calculateRotation(skill.percentage)}deg)` }}
+                    />
+                    <div className='graph__segment--background'   />
+                  </>
                 )}
-            
-            
+                
+              </div>
+              <span tooltip={`${skill.percentage}%`}  className={`tooltip skill-level-${skill.level}`}>{skill.label}</span>
+            </section>
+            <p className='description'>{skill.description}</p>
           </li>
         ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

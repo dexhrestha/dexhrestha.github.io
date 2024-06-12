@@ -58,22 +58,12 @@ const projects = [
 ];
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
-  // { name: 'SQL', link: 'test' },
-  { name: 'SQL'},
-  { name: 'Python' },
-  { name: 'R' },
-  { name: 'Power BI' },
-  { name: 'DAX' },
-  { name: 'Power Query' },
-  { name: 'Shiny' },
-  { name: 'Tableau' },
-  { name: 'Git' },
-  { name: 'CI/CD' },
-  { name: 'Excel' },
-  { name: 'Azure' },
-  { name: 'GCP' }
+  { model: 1, label: 'SQL', percentage: 85, multiGraph: false,level:5,description:"Proficient in SQL for expert-level database management, complex querying, and in-depth data analysis, enhancing data-driven decision-making in data science projects." },
+  { model: 2, label: 'Python', percentage: 95, multiGraph: false ,level:5,description:"Highly proficient in Python, utilizing it for advanced data analytics, scripting data workflows, and automating processes, enabling impactful data-driven decision-making in data science."  },
+  { model: 3, label: 'R', percentage: 92, multiGraph: false ,level:3,description:"Experienced in R for advanced statistical analysis, compelling data visualization, and robust machine learning applications" },
+  { model: 4, label: 'Power BI', percentage: 91, multiGraph: false ,level:5 ,description:"Skilled in Power BI for creating interactive dashboards and data visualization." },
+  { model: 5, label: 'Databricks', percentage: 78, multiGraph: false ,level:4,description:"Proficient in Databricks for big data analytics and collaborative data science."  },
+  { model: 6, label: 'Azure', percentage: 71, multiGraph: false ,level:4 ,description:"Experienced with Azure for cloud-based data solutions, including storage, databases, and analytics." },
 ];
 
 

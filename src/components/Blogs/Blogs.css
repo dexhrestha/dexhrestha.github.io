@@ -1,9 +1,12 @@
-a.blogs__grid {
+.blogs__grid {
   max-width: 100%;
   margin: 0 auto;
   display: grid; /* Changed from 'flexbox' to 'grid' */
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   grid-gap: 5em;
+  align-items: center;
+  row-gap: 5px;
+
 }
 
 .blogs {

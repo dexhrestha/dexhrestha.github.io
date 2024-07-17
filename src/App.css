@@ -5,7 +5,7 @@
   font-family: 'Poppins', sans-serif, 'Font Awesome 5 Free';
   line-height: 1.5;
   color: var(--clr-fg);
-  background: var(--blur-bg);
+  background: var(--blur-bg) fixed;
   z-index: 1;
   position: relative;
   background-size: cover;
@@ -19,7 +19,8 @@
 
 
 .light {
-  --blur-bg: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  --blur-bg: url('../public/bg-light.jpeg');
+  /* --blur-bg: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); */
 
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
@@ -133,6 +134,7 @@ main {
 .center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .link {

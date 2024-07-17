@@ -53,7 +53,7 @@ const Portfolio = () => {
         <Grid item xs >
         <section  className="fade-in rightRow center">
         <h2 className='section__title'>Portfolio</h2>
-        {stackArray?<Skills skills={[...stackArray]} header={false} filter/>:null}
+        {/* {stackArray?<Skills skills={[...stackArray]} header={false} filter/>:null} */}
         {/* {stackArray?console.log(stackArray):null} */}
                 {projectsData ? (
         projectsData.map((project) => (

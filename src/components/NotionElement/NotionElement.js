@@ -1,9 +1,10 @@
 import { NotionRenderer } from "react-notion-x";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { Code } from 'react-notion-x/build/third-party/code'
-import { Equation } from 'react-notion-x/build/third-party/equation'
-import { Collection } from 'react-notion-x/build/third-party/collection'
+import { Code } from 'react-notion-x/build/third-party/code';
+import { Equation } from 'react-notion-x/build/third-party/equation';
+import { Collection } from 'react-notion-x/build/third-party/collection';
+
 
 
 
@@ -85,6 +86,7 @@ const NotionElement = () => {
           fullPage
           hideBlockId
           darkMode
+          previewImages
           showCollectionViewDropdown={false}
           components={{ Code, Equation, Collection }}
         />

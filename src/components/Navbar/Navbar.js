@@ -47,6 +47,26 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact,scrollToBlogs})
             </Link>
           </li>):null}
 
+          <li className='nav__list-item'>
+          <Link to="/portfolio"
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            portfolio
+          </Link>
+        </li>
+
+        <li className='nav__list-item'>
+          <Link to="/publication"
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            Publication
+          </Link>
+        </li>
+
+
+
           {isHomePage && blogs.length ? (
           <li className='nav__list-item'>
             <NavLink
@@ -97,23 +117,6 @@ const Navbar = ({scrollToProjects,scrollToSkills,scrollToContact,scrollToBlogs})
         ) : null}
 
 
-<li className='nav__list-item'>
-          <Link to="/publication"
-            onClick={toggleNavList}
-            className='link link--nav'
-          >
-            Publication
-          </Link>
-        </li>
-
-        <li className='nav__list-item'>
-          <Link to="/portfolio"
-            onClick={toggleNavList}
-            className='link link--nav'
-          >
-            portfolio
-          </Link>
-        </li>
 
 <button
         type='button'

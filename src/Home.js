@@ -29,7 +29,7 @@ const Home = ({loaded,skillsRef,projectsRef,contactRef,blogsRef}) => {
       <main  >
       <About loaded={loaded}/>
       <Duties />
-      <Timeline data={timelineData}/>
+      {/* <Timeline data={timelineData}/> */}
       <Skills skills={skills} skillsRef={skillsRef} header/>
       <Projects projectsRef={projectsRef}/>
       <Blogs blogsRef={blogsRef}/>

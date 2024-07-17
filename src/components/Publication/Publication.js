@@ -48,7 +48,7 @@ const Publication = () => {
             {publicationData ? (
               <section className="rightRow">
                 <h2 className='section__title'>Publication</h2>
-                {stackArray ? <Skills skills={[...stackArray]} header={false} filter /> : null}
+                {/* {stackArray ? <Skills skills={[...stackArray]} header={false} filter /> : null} */}
                 <div className='project__container'>
                 {publicationData.map((project) => (
                   <ProjectContainer key={uniqid()} project={project} className="publication__center" />

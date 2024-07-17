@@ -1,10 +1,15 @@
-a.projects__grid {
+.projects__grid {
   max-width: 100%;
   margin: 0 auto;
-  display: grid; /* Changed from 'flexbox' to 'grid' */
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   grid-gap: 5em;
+  align-items: center;
+  justify-items: start; /* Align items to start from the center */
+  row-gap: 5px;
+  column-gap: 20px;
 }
+
 
 .projects {
   align-items: center;

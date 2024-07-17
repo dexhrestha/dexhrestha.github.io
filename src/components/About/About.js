@@ -1,19 +1,21 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import InstagramIcon from '@mui/icons-material/Instagram'
-import Typing from '../Typing/Typing'
+// import Typing from '../Typing/Typing'
 import { about } from '../../portfolio'
 
 import './About.css'
+import { FlipWords } from '../ui/flipWords'
+import { Typing } from '../Typing/Typing'
 
 
 const About = ({loaded}) => {
   const { name, role, description, resume, social } = about
   const roles = [
-    '  Data Scientist',
-    '  Data Engineer',
-    '  Software Engineer',
-    '  Data Analyst',
+    'Data Scientist',
+    'Data Engineer',
+    'Software Engineer',
+    'Data Analyst',
   ]
 
   return (
@@ -26,8 +28,11 @@ const About = ({loaded}) => {
         </h1>
       )}
 
-      {/* {role && <h2 className='about__role'>A {role}.</h2>} */}
-      {role && <h2 className='fade-in  about__role' id ="typing">A <Typing className='typing' texts={roles}/></h2>}
+      {role && <h2 className='fade-in' style={{flexDirection:'row'}}>
+        <Typing words={roles}/>
+      </h2>
+    }
+      
       <p className='fade-in  about__desc'>{description && description}</p>
 
       <div className='fade-in  about__contact center'>
@@ -38,14 +43,6 @@ const About = ({loaded}) => {
             </span>
           </a>
         )}
-
-{/*       
-        <Link to="/portfolio">
-          <span type='button' className='btn btn--outline'>
-          Portfolio
-          </span>
-        </Link> */}
-      
 
         {social && (
           <>

@@ -1,18 +1,44 @@
 .project {
   position: relative;
-  height: auto;
+  min-height: 350px;
   width: 100%; /* Make sure the project takes up full width of the container */
   max-width: 900px;
   margin: 2em auto;
   border-radius: 25px;
-  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
-
+  box-shadow: var(--shadow);
   text-align: center;
   transition: transform 0.2s linear;
+  background-position: center calc(75%);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.project:hover {
-  transform: translateY(-7px);
+
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+ 
+  padding: 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.content-overlay:hover *{
+  opacity: 1;
+  color: #fff;
+}
+
+
+.project:hover .content-overlay {
+  backdrop-filter: blur(5px); /* Adds a blur effect to the overlay on hover */
+  background-color: rgba(0, 0, 0, 0.75); /* Adds a semi-transparent dark overlay */
 }
 
 .project .title-overlay {
@@ -31,6 +57,12 @@
   transition: opacity 0.3s ease;
 }
 
+.content *{
+  opacity: 0; 
+  text-align: center;
+}
+
+
 @media screen and (max-width: 767px) {
   .project:hover .title-overlay {
     opacity: 1;
@@ -48,6 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0;
     width: 100%;
     margin: 1em auto 0 auto;
@@ -63,10 +96,6 @@
 
   .inner-part .img {
     margin-bottom: 10px;
-  }
-
-  .content .title {
-    display: none;
   }
 
   .content .text {
@@ -145,9 +174,9 @@
 }
 
 .card__title_link {
-  color: var(--clr-fg);
+  color: #fff
 }
 
 .card__title_link:hover {
-  color: var(--clr-fg-alt);
+  color: var(--clr-primary)
 }

@@ -4,19 +4,16 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import './ProjectContainer.css';
 
 const ProjectContainer = ({ project }) => (
-  <div className="project">
-    <div className="inner-part">
-        <span className="img">
-        <img id="sample" className="img-1" src={project.img_src?project.img_src:"projects/sample.png"} alt="Sales Dashboard" />
-        <a href={project.blog_url}><div className="title-overlay">{project.name}</div></a> {/* Title overlay */}
-      </span>
+  <div className="project" style={{ background: `url(${project.img_src ? project.img_src : "projects/sample.png"}) center top/cover no-repeat` }}>
+    <div className="content-overlay">
       <div className="content">
-        <div className="title"><a href={project.blog_url} className='card__title_link'>{project.name}</a></div>
+        <div className="title">
+          <a href={project.blog_url} className='card__title_link'>{project.name}</a>
+        </div>
         <div className="text">
           <p className='project__description'>{project.description}</p>
         </div>
         <div className='interact'>
-
           {project.sourceCode && (
             <a
               href={project.sourceCode}

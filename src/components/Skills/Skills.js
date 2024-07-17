@@ -5,13 +5,6 @@ import './Skills.css';
 const calculateRotation = (percentage) => {
   return 1.8 * percentage; // 1.8 degrees per percentage point for a semi-circle (180 degrees max)
 };
-const colors = {
-  "1": "#attr(color)",
-  "2": "#e74c3c",
-  "3": "#f39c12",
-  "4": "#9b59b6",
-  "5": "#2ecc71"
-};
 
 const Skills = ({ skills, header, filter, skillsRef }) => {
   if (!skills.length) return null;
@@ -39,7 +32,7 @@ const Skills = ({ skills, header, filter, skillsRef }) => {
                     <div
                       className={`graph__segment skill-level-${skill.level}`}
                       
-                      style={{borderColor:colors[skill.level], transform: `rotate(${calculateRotation(skill.percentage)}deg)` }}
+                      style={{ transform: `rotate(${calculateRotation(skill.percentage)}deg)` }}
                     />
                     <div className='graph__segment--background'   />
                   </>

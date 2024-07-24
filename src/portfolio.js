@@ -10,7 +10,7 @@ const about = {
   role: 'Data Scientist',
   description:
     "As a Certified Data Professional with a Masters in Data Science, I bring versatile experience and expertise in Machine Learning, Big Data, and AI Technologies. Passionate about solving complex problems, I offer unique insights and proven success in data-driven decision making, effectively communicating intricate data insights to drive impactful results.",
-  resume: 'https://drive.google.com/drive/u/2/folders/1GAvWeUYWbapuSBMexuAEtzK--iEmxyU8',
+  resume: 'https://drive.google.com/file/d/17wMPqqpecM4gyrtXmYBn0OqoZfxfCr7A/view?usp=drive_link',
   social: {
     linkedin: 'https://linkedin.com/in/dexhrestha',
     github: 'https://github.com/dexhrestha',

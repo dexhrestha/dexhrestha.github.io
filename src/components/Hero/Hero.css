@@ -1,0 +1,13 @@
+.about__image {
+  margin-top: 2rem;
+    width: 20em;
+    height: auto;
+    min-height: 20em;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('/public/images/profile_dark.jpg');
+    background-size: cover;
+    background-position:  calc(50% - 3px) center;
+    border: 2px solid #fff; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  }

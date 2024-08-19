@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/dexhrestha/dexhrestha.github.io/static/css/main.cacdbf5a.css",
-    "main.js": "/dexhrestha/dexhrestha.github.io/static/js/main.dd73a39e.js",
-    "static/js/453.bb828c5d.chunk.js": "/dexhrestha/dexhrestha.github.io/static/js/453.bb828c5d.chunk.js",
-    "static/media/fa-solid-900.ttf": "/dexhrestha/dexhrestha.github.io/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
-    "static/media/fa-brands-400.ttf": "/dexhrestha/dexhrestha.github.io/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
-    "static/media/fa-solid-900.woff2": "/dexhrestha/dexhrestha.github.io/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
-    "static/media/CalSans-SemiBold.ttf": "/dexhrestha/dexhrestha.github.io/static/media/CalSans-SemiBold.49fc94b867f6eda4f056.ttf",
-    "static/media/fa-brands-400.woff2": "/dexhrestha/dexhrestha.github.io/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
-    "static/media/profile_dark.jpg": "/dexhrestha/dexhrestha.github.io/static/media/profile_dark.e267e30bd072b0c8c0b9.jpg",
-    "static/media/fa-regular-400.ttf": "/dexhrestha/dexhrestha.github.io/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
-    "static/media/CalSans-SemiBold.woff": "/dexhrestha/dexhrestha.github.io/static/media/CalSans-SemiBold.b8c456ff9fd96840cdca.woff",
-    "static/media/CalSans-SemiBold.woff2": "/dexhrestha/dexhrestha.github.io/static/media/CalSans-SemiBold.82d4f62fb972e38abe4a.woff2",
-    "static/media/fa-regular-400.woff2": "/dexhrestha/dexhrestha.github.io/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
-    "static/media/fa-v4compatibility.ttf": "/dexhrestha/dexhrestha.github.io/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
-    "static/media/fa-v4compatibility.woff2": "/dexhrestha/dexhrestha.github.io/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
-    "static/media/logo.svg": "/dexhrestha/dexhrestha.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/dexhrestha/dexhrestha.github.io/index.html",
-    "main.cacdbf5a.css.map": "/dexhrestha/dexhrestha.github.io/static/css/main.cacdbf5a.css.map",
-    "main.dd73a39e.js.map": "/dexhrestha/dexhrestha.github.io/static/js/main.dd73a39e.js.map",
-    "453.bb828c5d.chunk.js.map": "/dexhrestha/dexhrestha.github.io/static/js/453.bb828c5d.chunk.js.map"
+    "main.css": "/static/css/main.4d601231.css",
+    "main.js": "/static/js/main.30b3937b.js",
+    "static/js/453.bb828c5d.chunk.js": "/static/js/453.bb828c5d.chunk.js",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/CalSans-SemiBold.ttf": "/static/media/CalSans-SemiBold.49fc94b867f6eda4f056.ttf",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/profile_dark.jpg": "/static/media/profile_dark.e267e30bd072b0c8c0b9.jpg",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/CalSans-SemiBold.woff": "/static/media/CalSans-SemiBold.b8c456ff9fd96840cdca.woff",
+    "static/media/CalSans-SemiBold.woff2": "/static/media/CalSans-SemiBold.82d4f62fb972e38abe4a.woff2",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.4d601231.css.map": "/static/css/main.4d601231.css.map",
+    "main.30b3937b.js.map": "/static/js/main.30b3937b.js.map",
+    "453.bb828c5d.chunk.js.map": "/static/js/453.bb828c5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cacdbf5a.css",
-    "static/js/main.dd73a39e.js"
+    "static/css/main.4d601231.css",
+    "static/js/main.30b3937b.js"
   ]
 }

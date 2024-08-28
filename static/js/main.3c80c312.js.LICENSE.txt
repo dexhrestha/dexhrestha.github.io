@@ -1,3 +1,5 @@
+/*! @fisch0920/medium-zoom 1.0.7 | MIT License | https://github.com/francoischalifour/medium-zoom */
+
 /**
  * @license @tabler/icons-react v3.12.0 - MIT
  *
@@ -57,6 +59,15 @@
  */
 
 /**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
+ */
+
+/**
  * React Router v6.26.1
  *
  * Copyright (c) Remix Software Inc.
@@ -65,4 +76,13 @@
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
+ */
+
+/**! 
+ * hotkeys-js v3.9.4 
+ * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
+ * 
+ * Copyright (c) 2022 kenny wong <wowohoo@qq.com> 
+ * http://jaywcjlove.github.io/hotkeys 
+ * Licensed under the MIT license 
  */

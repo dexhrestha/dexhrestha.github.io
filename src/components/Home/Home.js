@@ -96,7 +96,10 @@ const Home = () => {
                 key={"about" }
                 className="flex gap-2 flex-1 w-full max-h-screen h-full rounded-lg  bg-gray-100 dark:bg-neutral-800"
               >
-                       <Hero />
+                                       <GridBackground>
+                                       <Hero />
+                </GridBackground>
+                       
               </div>
    
               <div

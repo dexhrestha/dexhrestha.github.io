@@ -6,26 +6,28 @@ import  calsans  from "cal-sans";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../ui/tracing-beam";
 
+import {timeline} from "../../portfolio";
+
 export function Timeline() {
   return (
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-        {dummyContent.map((item, index) => (
+        {timeline.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
-            <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+            <h2 className="bg-black dark:bg-slate-200 dark:text-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
             </h2>
 
-            <p className={twMerge(calsans.className, "dark:text-white text-xl mb-4")}>
-              {item.title}
-            </p>
+            <h2 className={twMerge(calsans.className, "dark:text-white text-xl mb-4")}>
+              <strong>{item.title}</strong>
+            </h2>
 
             <div className="text-sm dark:text-white prose prose-sm dark:prose-invert">
               {item?.image && (
                 <img
                   src={item.image}
                   alt="blog thumbnail"
-                  height="1000"
+                  height="700"
                   width="1000"
                   className="rounded-lg mb-10 object-cover"
                 />

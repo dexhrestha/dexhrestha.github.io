@@ -1,19 +1,14 @@
-const fetchJson = async (endpoint, options = {}) => {
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      // Add other headers here if needed
-      ...options.headers,
-    },
-    ...options,
-  });
+const fetchData = async () => {
+  try {
+    // const topics = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_topics/publication`);
+    // const topics_data = await topics.json();
+    // setStackArray(topics_data);
 
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.message || 'Something went wrong');
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_publications`);
+    const data = await response.json();
+    setPublicationData(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
   }
-
-  return response.json();
 };
 
-export default fetchJson;

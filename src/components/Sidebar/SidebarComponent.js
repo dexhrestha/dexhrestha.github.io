@@ -17,7 +17,7 @@ import { cn } from "../../utils/cn";
 import Publications from "../Publications/Publications";
 import Home from "../Home/Home";
 import About from "../About/About";
-import Footer from '../Footer/Footer';
+import NotionElement from '../NotionElement/NotionElement';
 
 export function SidebarComponent() {
   const [open, setOpen] = useState(false);
@@ -121,6 +121,7 @@ export function SidebarComponent() {
         {/* Main content area */}
         <div className="flex-1 flex flex-col justify-between h-screen">
           <Routes>
+            <Route path="blog/:blogSlug" element={<NotionElement />} />
             <Route path="portfolio" element={<Projects />} />
             <Route path="publications" element={<Publications />} />
             <Route path="about" element={<About />} />

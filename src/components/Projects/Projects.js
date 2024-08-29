@@ -12,16 +12,20 @@ export default function Projects() {
       // const response = await fetch(`https://notion-api.splitbee.io/v1/page/${blogSlug}`);
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_projects/4`)
       const data = await response.json();  
-      data['content']=     
-      <div className="h-full w-full  flex items-center justify-center text-white">
+      data.forEach((item)=>{
+        item.content=               
+        
+        <a href={item.livePreview?item.livePreview:""} className="h-full w-full  flex items-center justify-center text-white">
         <img
-          src={data.img_src}
+          src={item.img_src}
           width={300}
           height={300}
-          className="h-full w-full object-cover"
-          alt={data.name}
+          className="h-full w-full object-fill"
+          alt="linear board demo"
         />
-      </div>
+      </a>
+      })
+
       ;
       setProjects(data);
     } catch (error) {
@@ -35,7 +39,7 @@ export default function Projects() {
   
   return (
    (projects?<div className={`w-full h-full`}>
-      <StickyScroll content={projects} className="h-full" />
+      <StickyScroll content={projects}  className="h-full" />
     </div>:<></>)
   );
 };

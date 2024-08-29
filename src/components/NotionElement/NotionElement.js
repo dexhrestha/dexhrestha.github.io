@@ -13,7 +13,7 @@ import 'katex/dist/katex.min.css';
 
 import './NotionElement.css'
 
-const NotionElement = () => {
+const NotionElement = ({blogUrl}) => {
   const [recordMap, setRecordMap] = useState({});
   const { blogSlug } = useParams();
 
@@ -21,7 +21,7 @@ const NotionElement = () => {
     const fetchData = async () => {
       try {
         // const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/page/${blogSlug}`);
-        const response = await fetch(`${process.env.REACT_APP_NOTION_URL}/page/${blogSlug}`);
+        const response = await fetch(blogUrl?`${process.env.REACT_APP_NOTION_URL}/page/${blogUrl}`:`${process.env.REACT_APP_NOTION_URL}/page/${blogSlug}`);
         const data = await response.json();   
         setRecordMap(data);
       } catch (error) {

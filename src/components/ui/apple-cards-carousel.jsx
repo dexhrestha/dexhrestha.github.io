@@ -13,6 +13,7 @@ import {
 import { cn } from "../../utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../hooks/use-outside-click";
+import NotionElement from "../NotionElement/NotionElement";
 
 export const CarouselContext = createContext({
   onCardClose: () => {},
@@ -195,13 +196,8 @@ export const Card = ({
               className="text-base font-medium text-black dark:text-white">
               {card.category}
             </motion.p>
-            <motion.p
-              layoutId={layout ? `title-${card.title}` : undefined}
-              className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white">
-              {card.title}
-            </motion.p>
-            <div className="py-10">{card.content}</div>
-          </motion.div>
+            <div className="py-10 max-w-full max-h-[600px] overflow-auto">{card.content}</div>
+            </motion.div>
         </div>
       )}
     </AnimatePresence>
@@ -220,7 +216,7 @@ export const Card = ({
         <motion.p
           layoutId={layout ? `title-${card.title}` : undefined}
           className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2">
-          {card.title}
+          <a href={card.livePreview?card.livePreview:card.blog_url}>{card.title}</a>
         </motion.p>
       </div>
       <BlurImage

@@ -9,9 +9,34 @@ import {
     IconSignature,
     IconTableColumn,
   } from "@tabler/icons-react";
-  import { motion } from "framer-motion";
+import { motion } from "framer-motion";
+import {useState,useEffect} from 'react';
   
 export default function Publications({ title }) {
+  const [blogs,setBlogs] = useState(null);
+
+  useEffect(()=>{
+    const fetchData = async ()=>{
+    try {
+      // const response = await fetch(`https://notion-api.splitbee.io/v1/page/${blogSlug}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get_publications/5`)
+      const data = await response.json();  
+      data.forEach((item)=>{
+        item.category = item.tags[0];
+        item.src = item.img_src;
+        item.title = item.name;
+      })
+
+      ;
+      setBlogs(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+},[])
+
   return (
     <div className="w-full h-full py-10">
 <h2 className="w-min ml-12 text-left text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans z-[9999] py-2">
@@ -22,16 +47,17 @@ export default function Publications({ title }) {
 
 
       <BentoGrid className="max-w-4xl mx-auto px-5 py-5 md:py-10 md:auto-rows-[20rem]">
-        {items.map((item, i) => (
+        {blogs?blogs.map((item, i) => (
           <BentoGridItem
             key={i}
-            title={item.title}
+            url={item.blog_url}
+            title={item.name}
             description={item.description}
-            header={item.header}
+            header={item.categ}
             className={cn("[&>p:text-lg]", item.className)}
-            icon={item.icon}
+            icon={<IconClipboardCopy className="h-4 w-4 text-neutral-500" />}
           />
-        ))}
+        )):<></>}
       </BentoGrid>
     </div>
   );

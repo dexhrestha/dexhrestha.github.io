@@ -11,14 +11,20 @@ export const timeline = [
         image: "https://i.ibb.co/BV1BzZC/Screenshot-2024-08-28-at-21-39-08.png",
         description: (
             <>
-            <ul>
-                <li><strong>Predictive Models:</strong> I developed machine learning models to predict sports outcomes with high accuracy. Utilizing techniques such as logistic regression, random forests, and neural networks, I have significantly improved the precision of our predictions.</li>
-                <li><strong>Betting Strategy Optimization:</strong> I worked on optimizing betting strategies through historical data analysis. By implementing algorithms to identify betting patterns, I have helped maximize our clients' return on investment (ROI).</li>
-                <li><strong>Real-Time Data Analysis:</strong> I created a system for real-time data analysis that allows dynamic adjustments to odds and betting recommendations based on changes in probabilities and other critical factors.</li>
-                <li><strong>Data Visualization:</strong> I designed interactive dashboards using tools like Tableau and Power BI. These dashboards enable marketing and operations teams to make data-driven decisions with up-to-date and visually engaging information.</li>
-                <li><strong>Report Automation:</strong> I developed Python scripts to automate the generation of weekly performance reports, reducing the time spent on repetitive tasks by 40% and enhancing the accuracy of the reports.</li>
-            </ul>
-            <p>I am enthusiastic about continuing to learn and contribute, and I look forward to leveraging my data science skills to drive success in the betting industry.</p>
+<ul>
+    <li title="Gaussian Mixture Model in PySpark">
+        Developed a Gaussian Mixture Model in <strong>PySpark</strong>, increasing precision for identifying positive play behavior by <strong>20%</strong>.
+    </li>
+    <li title="Power BI Optimization">
+        Updated and optimized <strong>Power BI</strong> dashboards using DAX, improving data interpretation, and enabling real-time monitoring.
+    </li>
+    <li title="Quality Assurance and Model Testing">
+        Supported data scientists with quality assurance and statistical model testing, documenting procedures.
+    </li>
+    <li title="Predictive Model for Player Retention">
+        Assisted in developing a predictive model for player retention, contributing to <strong>8%</strong> improvement in predicting player churn.
+    </li>
+</ul>
             </>
         ),
     },
@@ -29,30 +35,35 @@ export const timeline = [
         description: (
             <>
             <ul>
-                <li><strong>Predictive Models:</strong> I developed machine learning models to predict sports outcomes with high accuracy. Utilizing techniques such as logistic regression, random forests, and neural networks, I have significantly improved the precision of our predictions.</li>
-                <li><strong>Betting Strategy Optimization:</strong> I worked on optimizing betting strategies through historical data analysis. By implementing algorithms to identify betting patterns, I have helped maximize our clients' return on investment (ROI).</li>
-                <li><strong>Real-Time Data Analysis:</strong> I created a system for real-time data analysis that allows dynamic adjustments to odds and betting recommendations based on changes in probabilities and other critical factors.</li>
-                <li><strong>Data Visualization:</strong> I designed interactive dashboards using tools like Tableau and Power BI. These dashboards enable marketing and operations teams to make data-driven decisions with up-to-date and visually engaging information.</li>
-                <li><strong>Report Automation:</strong> I developed Python scripts to automate the generation of weekly performance reports, reducing the time spent on repetitive tasks by 40% and enhancing the accuracy of the reports.</li>
-            </ul>
-            <p>I am enthusiastic about continuing to learn and contribute, and I look forward to leveraging my data science skills to drive success in the betting industry.</p>
+    <li title="Python Automation for ORBIS">
+        Developed and implemented a Python-based automation solution to bypass data size limitations in ORBIS.
+    </li>
+    <li title="Longitudinal Database Transition">
+        Transitioned to a longitudinal database  For efficient storage and management of the extracted data.
+    </li>
+    <li title="Code Documentation and User Guides">
+        Documented code and created comprehensive user guides to ensure ease of use and maintenance for future developers.
+    </li>
+</ul>
+
             </>
         ),
     },
     {
         title: "Nimble Clinical Research",
         badge: "Dec 2020",
-        image: "",
+        image: "https://i.ibb.co/7zjC5B4/DSC-1009.jpg",
         description: (
             <>
             <ul>
-                <li><strong>Predictive Models:</strong> I developed machine learning models to predict sports outcomes with high accuracy. Utilizing techniques such as logistic regression, random forests, and neural networks, I have significantly improved the precision of our predictions.</li>
-                <li><strong>Betting Strategy Optimization:</strong> I worked on optimizing betting strategies through historical data analysis. By implementing algorithms to identify betting patterns, I have helped maximize our clients' return on investment (ROI).</li>
-                <li><strong>Real-Time Data Analysis:</strong> I created a system for real-time data analysis that allows dynamic adjustments to odds and betting recommendations based on changes in probabilities and other critical factors.</li>
-                <li><strong>Data Visualization:</strong> I designed interactive dashboards using tools like Tableau and Power BI. These dashboards enable marketing and operations teams to make data-driven decisions with up-to-date and visually engaging information.</li>
-                <li><strong>Report Automation:</strong> I developed Python scripts to automate the generation of weekly performance reports, reducing the time spent on repetitive tasks by 40% and enhancing the accuracy of the reports.</li>
+                <li>Led the development of a clinical data analysis platform, processing over 50 million clinical records with a <strong>90%</strong> reduction in processing time compared to previous system based on <strong>SAS</strong>.</li>
+                <li>Developed a comprehensive data visualization component within the clinical data analysis system, utilizing <strong>R</strong> programming language and <strong>Plotly</strong> library.
+                </li>
+                <li>Implemented a scalable PDF reporting system leveraging <strong>Jinja</strong> templating engine within the clinical data analysis platform facilitating the generation of customizable reports and optimizing data visualization.
+                </li>
+                <li>Ensured quality assurance and compliance standards by designing and implementing an <strong>ELT pipeline</strong> for data loading from <strong>Azure</strong>data storage, maintaining data integrity and security.
+                </li>
             </ul>
-            <p>I am enthusiastic about continuing to learn and contribute, and I look forward to leveraging my data science skills to drive success in the betting industry.</p>
             </>
         ),
     },
@@ -106,3 +117,13 @@ export const projects = [
       ),
     },
   ];
+
+
+export  const certifications = [
+    {'name':'Microsoft Certified: Power BI Data Analyst Associate','image':'certifications/pbi_badge.png',href:"https://learn.microsoft.com/api/credentials/share/en-us/DipeshShrestha-3413/BE92B44902DEFAC0?sharingId=A171CB937994744D",'date':'20/04/2025',},
+    {'name':'Professional Data Scientist','image':'certifications/ds_badge.svg',href:"https://www.datacamp.com/certificate/DS0020536161448",'date':'11/04/2026',},
+    {'name':'Professional Data Analyst','image':'certifications/da_badge.svg',href:"https://www.datacamp.com/certificate/DA0027078983162",'date':'02/03/2026',},
+    {'name':'SQL Associate','image':'certifications/sql_badge.svg',href:"https://www.datacamp.com/certificate/SQA0019399922684",'date':'17/04/2026',},
+    
+  ];
+  

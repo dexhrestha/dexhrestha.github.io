@@ -26,13 +26,13 @@ export default function About({ title }) {
           {/* Project Metrics Cards */}
           <div className="flex md:px-5 gap-4 mb-6">
             <div className="h-32 w-full sm:w-1/2 lg:w-1/4 rounded-lg bg-gray-100 dark:bg-neutral-800 p-4 flex items-center justify-between shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
-              <MetricCard icon={<IconBrandPython />} label="Projects" metric={3} />
+              <MetricCard icon={<IconBrandPython />} label="Projects" metric={32} />
             </div>
             <div className="h-32 w-full sm:w-1/2 lg:w-1/4 rounded-lg bg-gray-100 dark:bg-neutral-800 p-4 flex items-center justify-between shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
-              <MetricCard icon={<IconFileInfo />} label="Research Papers" metric={5} />
+              <MetricCard icon={<IconFileInfo />} label="Research Papers" metric={2} />
             </div>
             <div className="h-32 w-full sm:w-1/2 lg:w-1/4 rounded-lg bg-gray-100 dark:bg-neutral-800 p-4 flex items-center justify-between shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
-              <MetricCard icon={<IconBrandBlogger />} label="Blog Posts" metric={15} />
+              <MetricCard icon={<IconBrandBlogger />} label="Blog Posts" metric={3} />
             </div>
             <div className="h-32 w-full sm:w-1/2 lg:w-1/4 rounded-lg bg-gray-100 dark:bg-neutral-800 p-4 flex items-center justify-between shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
               <MetricCard icon={<IconCertificate />} label="Data Science Certifications" metric={3} />

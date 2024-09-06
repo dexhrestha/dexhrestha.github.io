@@ -3,7 +3,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 
 export default function Certifications({ certifications }) {
   return (
-    <div className="grid grid-cols-4 gap-4 sm:flex sm:flex-wrap sm:gap-6 justify-center  mb-10 px-5">
+    <div className="grid grid-cols-4 gap-4 sm:flex sm:flex-wrap sm:gap-6 justify-center  my-10 px-5">
       {certifications.map((cert, index) => (
         <a href={cert.href}>
         <BackgroundGradient

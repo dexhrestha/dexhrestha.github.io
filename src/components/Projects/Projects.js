@@ -38,8 +38,9 @@ export default function Projects() {
 
   
   return (
-   (projects?<div className={`w-full h-full`}>
-      <StickyScroll content={projects}  className="h-full" />
+   (projects?
+    <div className={`w-full h-full`}>
+      <StickyScroll content={projects} className="h-screen sm:h-auto md:h-full" />
     </div>:<></>)
   );
 };

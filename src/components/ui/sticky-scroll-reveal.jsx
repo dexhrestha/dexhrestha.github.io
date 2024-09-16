@@ -58,9 +58,9 @@ export const StickyScroll = ({
       className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
       ref={ref}
     >
-      <h2 className="text-xl md:text-5xl font-bold text-neutral-200 dark:text-neutral-200 font-sans z-10 px-4">
+      {/* <h2 className="text-xl md:text-5xl font-bold text-neutral-200 dark:text-neutral-200 font-sans z-10 px-4">
         <span>Recent Projects</span>
-      </h2>
+      </h2> */}
 
       <div className="relative flex items-start px-32">
         <div className="max-w-2xl">

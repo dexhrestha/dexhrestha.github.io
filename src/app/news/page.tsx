@@ -1,4 +1,4 @@
-import { News } from '@/src/components/posts'
+import { News } from '@/src/components/news'
 
 export const metadata = {
   title: 'News',

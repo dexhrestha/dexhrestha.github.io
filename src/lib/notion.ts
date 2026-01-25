@@ -7,9 +7,9 @@ import { NotionToMarkdown } from "notion-to-md";
 import { cache } from "react";
 
 
-const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID
-if (!NOTION_DATABASE_ID) {
-  throw new Error('Missing NOTION_DATABASE_ID environment variable')
+const NOTION_BLOGS_DB_ID = process.env.NOTION_BLOGS_DB_ID
+if (!NOTION_BLOGS_DB_ID) {
+  throw new Error('Missing NOTION_BLOGS_DB_ID environment variable')
 }
 
 // Initialize Notion client
@@ -27,7 +27,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 
 export const getNotionPages = cache(() => {
   return notion.databases.query({
-    database_id: process.env.NOTION_DATABASE_ID!,
+    database_id: process.env.NOTION_BLOGS_DB_ID!,
     filter: {
       property: 'Status',
       select: { equals: 'Published' },
@@ -45,7 +45,7 @@ export const getPageContent = cache((pageId:string)=>{
 export const getPageBySlug = cache((slug: string) => {
   return notion.databases
     .query({
-      database_id: NOTION_DATABASE_ID,
+      database_id: NOTION_BLOGS_DB_ID,
       filter: {
         property: 'Slug',
         rich_text: { equals: slug },

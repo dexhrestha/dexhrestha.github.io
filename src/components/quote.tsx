@@ -25,7 +25,7 @@ export async function Quote() {
   return (
     <section className="max-w-2xl mx-auto py-8">
       <p className="text-xs uppercase tracking-wider text-gray-400 mb-2">
-        Daily Quote
+        Thought of the Day
       </p>
       <blockquote className="relative border-l-4 border-gray-300 pl-6">
         <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed italic">

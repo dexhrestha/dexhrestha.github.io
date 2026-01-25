@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { formatDate, getNews } from '@/src/app/news/utils'
+export const revalidate = 60;
 
 export async function News() {
   const allNews = await getNews();

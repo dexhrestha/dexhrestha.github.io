@@ -1,7 +1,10 @@
 import { getDailyQuote } from '@/src/lib/notion'
 import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints'
+export const revalidate = 60;
 
 export async function Quote() {
+    console.log("PAGE REGENERATED AT:", new Date().toISOString());
+
   const quote = await getDailyQuote(process.env.NOTION_QUOTES_DB_ID!)
   const item = quote?.results?.[0]
   if (!item || item.object !== 'page') return null

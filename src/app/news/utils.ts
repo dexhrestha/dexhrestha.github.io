@@ -1,27 +1,21 @@
-type Metadata = {
-  title: string
-  publishedAt: string
+import { getNotionPages } from "@/src/lib/notion";
+
+type NewsMetadata = {
+  slug: string;
+  title: string;
+  publishedAt: string;
+};
+
+export async function getNews(): Promise<NewsMetadata[]> {
+  const news = await getNotionPages(process.env.NOTION_NEWS_DB_ID);
+
+  return news.results.map((page: any): NewsMetadata => ({
+    slug: page.properties.Slug?.rich_text?.[0]?.plain_text ?? "",
+    title: page.properties.Title?.title?.[0]?.plain_text ?? "",
+    publishedAt: page.properties.Date?.date?.start ?? "",
+  }));
 }
 
-export function getNews() {
-  return [
-    {
-      slug: "portfolio-deployment",
-      title: "Deployed my portfolio",
-      publishedAt: "2026-01-24"
-    },
-    {
-      slug: "joined-bottinitlab-",
-      title: "Joined the Bottini Lab as a Research Assistant",
-      publishedAt: "2025-05-21"
-    },
-    // {
-    //   slug: "news-3",
-    //   title: "News 3",
-    //   publishedAt: "2026-01-20"
-    // }
-  ];
-}
 
 
 export function formatDate(date: string, includeRelative = false) {

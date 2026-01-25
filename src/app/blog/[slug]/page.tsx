@@ -8,17 +8,17 @@ import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
 import { Post } from "../post";
 
- export default async function BlogPage({
+ export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string }>,
 }) {
-  const { slug } = await params;
+  const { slug} = await params;
   
   // Fetch and convert Notion page content to markdown
   // Uses the utility function we created earlier
   console.log(slug);
-  const post = await getPageBySlug(slug);
+  const post = await getPageBySlug(process.env.NOTION_BLOGS_DB_ID!,slug);
 
   if (!post) notFound();
 

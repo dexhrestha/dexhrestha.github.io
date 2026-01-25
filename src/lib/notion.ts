@@ -7,10 +7,10 @@ import { NotionToMarkdown } from "notion-to-md";
 import { cache } from "react";
 
 
-const NOTION_BLOGS_DB_ID = process.env.NOTION_BLOGS_DB_ID
-if (!NOTION_BLOGS_DB_ID) {
-  throw new Error('Missing NOTION_BLOGS_DB_ID environment variable')
-}
+// const NOTION_BLOGS_DB_ID = process.env.NOTION_BLOGS_DB_ID
+// if (!NOTION_BLOGS_DB_ID) {
+//   throw new Error('Missing NOTION_BLOGS_DB_ID environment variable')
+// }
 
 // Initialize Notion client
 export const notion = new Client({
@@ -25,9 +25,9 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
  * @returns A promise that resolves to the markdown string representation of the page
  */
 
-export const getNotionPages = cache(() => {
+export const getNotionPages = cache((databaseId) => {
   return notion.databases.query({
-    database_id: process.env.NOTION_BLOGS_DB_ID!,
+    database_id: databaseId!,
     filter: {
       property: 'Status',
       select: { equals: 'Published' },
@@ -42,10 +42,10 @@ export const getPageContent = cache((pageId:string)=>{
   .then((res)=>res.results as  BlockObjectResponse[]);
 });
 
-export const getPageBySlug = cache((slug: string) => {
+export const getPageBySlug = cache((databaseId:string,slug: string) => {
   return notion.databases
     .query({
-      database_id: NOTION_BLOGS_DB_ID,
+      database_id: databaseId,
       filter: {
         property: 'Slug',
         rich_text: { equals: slug },

@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import { formatDate, getNews } from '@/src/app/news/utils'
 
-export function News() {
-  let allBlogs = getNews()
+export async function News() {
+  const allNews = await getNews();
 
   return (
     <div>
-      {allBlogs
+      {allNews
         .sort((a, b) => {
           if (
             new Date(a.publishedAt) > new Date(b.publishedAt)
           ) {
-            return -1
+            return 1
           }
-          return 1
+          return -1
         })
         .map((post) => (
           <Link

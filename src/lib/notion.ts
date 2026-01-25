@@ -4,8 +4,7 @@ import { Client } from "@notionhq/client";
 import { BlockObjectResponse, PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 import { NotionToMarkdown } from "notion-to-md";
-import { cache } from "react";
-
+ 
 
 // const NOTION_BLOGS_DB_ID = process.env.NOTION_BLOGS_DB_ID
 // if (!NOTION_BLOGS_DB_ID) {
@@ -24,46 +23,41 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
  * @param id The Notion page ID to retrieve
  * @returns A promise that resolves to the markdown string representation of the page
  */
-
-export const getNotionPages = cache((databaseId) => {
+export const getNotionPages = async (databaseId: string) => {
   return notion.databases.query({
-    database_id: databaseId!,
+    database_id: databaseId,
     filter: {
-      property: 'Status',
-      select: { equals: 'Published' },
+      property: "Status",
+      select: { equals: "Published" },
     },
-  })
-})
+  });
+};
 
-export const getDailyQuote = cache((databaseId) => {
+export const getDailyQuote = async (databaseId: string) => {
   return notion.databases.query({
-    database_id: databaseId!,
+    database_id: databaseId,
     filter: {
-      property: 'Today',
+      property: "Today",
       checkbox: { equals: true },
     },
-  })
-})
+  });
+};
 
+export const getPageContent = async (pageId: string) => {
+  const res = await notion.blocks.children.list({ block_id: pageId });
+  return res.results as BlockObjectResponse[];
+};
 
-export const getPageContent = cache((pageId:string)=>{
-  return notion.blocks.children
-  .list({block_id:pageId})
-  .then((res)=>res.results as  BlockObjectResponse[]);
-});
-
-export const getPageBySlug = cache((databaseId:string,slug: string) => {
-  return notion.databases
-    .query({
-      database_id: databaseId,
-      filter: {
-        property: 'Slug',
-        rich_text: { equals: slug },
-      },
-    })
-    .then((res) => res.results[0] as PageObjectResponse | undefined)
-})
-
+export const getPageBySlug = async (databaseId: string, slug: string) => {
+  const res = await notion.databases.query({
+    database_id: databaseId,
+    filter: {
+      property: "Slug",
+      rich_text: { equals: slug },
+    },
+  });
+  return res.results[0] as PageObjectResponse | undefined;
+};
 
 export async function getPageMarkdown(id: string): Promise<string> {
   console.log(id);

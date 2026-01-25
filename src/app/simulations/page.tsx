@@ -1,4 +1,5 @@
 import { BlogPosts } from '@/src/components/posts'
+export const revalidate = 60;  
 
 export const metadata = {
   title: 'Publications',

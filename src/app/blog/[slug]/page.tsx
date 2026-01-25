@@ -7,6 +7,7 @@ import { NotionRenderer } from "@notion-render/client";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
 import { Post } from "../post";
+export const revalidate = 60;  
 
  export default async function Page({
   params,

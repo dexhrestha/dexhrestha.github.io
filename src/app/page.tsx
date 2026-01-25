@@ -1,6 +1,7 @@
 import { News } from '@/src/components/news'
 import Link from 'next/link'
 import { Quote } from '../components/quote'
+export const revalidate = 60;  
 
 export default function Page() {
   return (
@@ -9,7 +10,7 @@ export default function Page() {
         Dipesh Shrestha
       </h1>
       <Quote />
-      
+
       <Link key="contact" 
             className="text-blue-600 underline hover:text-blue-800 visited:text-purple-600"   
             target="_blank"

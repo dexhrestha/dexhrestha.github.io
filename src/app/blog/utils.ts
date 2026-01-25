@@ -47,7 +47,7 @@ function getDateStart(prop: any): string | null {
 }
 
 export async function getBlogPosts(): Promise<BlogPostForSitemap[]> {
-  const res = await getNotionPages(process.env.NOTION_BLOGS_DB_ID)
+  const res = await getNotionPages(process.env.NOTION_BLOGS_DB_ID!)
 
   return res.results
     .map((page: any) => {

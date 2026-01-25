@@ -2,6 +2,8 @@
 import bookmarkPlugin from '@notion-render/bookmark-plugin';
 import { NotionRenderer } from '@notion-render/client';
 import hljsPlugin from '@notion-render/hljs-plugin';
+
+export const revalidate = 60;  
  
 
 export const metadata = {

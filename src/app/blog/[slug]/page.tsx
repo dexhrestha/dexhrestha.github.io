@@ -1,92 +1,53 @@
-import { notFound } from 'next/navigation'
-import { CustomMDX } from '@/src/components/mdx'
-import { formatDate, getBlogPosts } from '@/src/app/blog/utils'
-import { baseUrl } from '@/src/app/sitemap'
+import {  getPageBySlug, getPageContent, getPageMarkdown } from "@/src/lib/notion";
+import Markdown from "markdown-to-jsx";
+import "@/src/styles/markdown.css"; // load css file
+import { notFound } from "next/navigation";
+import { notion } from "@/src/lib/notion";
+import { NotionRenderer } from "@notion-render/client";
+import hljsPlugin from "@notion-render/hljs-plugin";
+import bookmarkPlugin from "@notion-render/bookmark-plugin";
+import { Post } from "../post";
 
-type Params = { slug: string }
-type PageProps = { params: Promise<Params> }
+ export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>,
+}) {
+  const { slug } = await params;
+  
+  // Fetch and convert Notion page content to markdown
+  // Uses the utility function we created earlier
+  console.log(slug);
+  const post = await getPageBySlug(slug);
 
-export async function generateStaticParams(): Promise<Params[]> {
-  const posts = getBlogPosts()
-  return posts.map((post) => ({ slug: post.slug }))
-}
+  if (!post) notFound();
 
-export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params
 
-  const post = getBlogPosts().find((post) => post.slug === slug)
-  if (!post) return
+  const content = await getPageContent(post.id);
 
-  const {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata
+  const notionRenderer = new NotionRenderer({
+    client:notion,
+  })
 
-  const ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  notionRenderer.use(hljsPlugin({}));
+  notionRenderer.use(bookmarkPlugin(undefined));
 
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
-      images: [{ url: ogImage }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [ogImage],
-    },
-  }
-}
+  const html = await notionRenderer.render(...content);
 
-export default async function Blog({ params }: PageProps) {
-  const { slug } = await params
+  console.log("Post",post);
 
-  const post = getBlogPosts().find((post) => post.slug === slug)
-  if (!post) notFound()
 
   return (
-    <section>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
-            author: {
-              '@type': 'Person',
-              name: 'My Portfolio',
-            },
-          }),
-        }}
-      />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
-      </div>
-      <article className="prose">
-        <CustomMDX source={post.content} />
-      </article>
-    </section>
-  )
+    <main>
+      <Post
+        title ={(post.properties.Title as any).title[0].plain_text}
+        publishedAt={(post.properties['Published Date'] as any).date.start}
+        author={(post.properties.Author as any).people[0]}
+        bannerImage={(post.properties.BannerImage as any).url}
+        bannerImageWidth={(post.properties.BannerImageWidth as any).number}
+        bannerImageHeight={(post.properties.BannerImageHeight as any).number}
+        content={html}
+      /> 
+    </main>
+  );
 }

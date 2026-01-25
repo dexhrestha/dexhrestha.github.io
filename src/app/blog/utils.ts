@@ -1,3 +1,4 @@
+import { getNotionPages } from '@/src/lib/notion'
 import fs from 'fs'
 import path from 'path'
 
@@ -50,7 +51,10 @@ function getMDXData(dir) {
 }
 
 export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(),'src', 'app', 'blog', 'posts'))
+  // return getMDXData(path.join(process.cwd(),'src', 'app', 'blog', 'posts'))
+  const pages =  getNotionPages(); 
+  return pages;
+
 }
 
 export function formatDate(date: string, includeRelative = false) {

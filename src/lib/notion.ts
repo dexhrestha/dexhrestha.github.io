@@ -35,6 +35,16 @@ export const getNotionPages = cache((databaseId) => {
   })
 })
 
+export const getDailyQuote = cache((databaseId) => {
+  return notion.databases.query({
+    database_id: databaseId!,
+    filter: {
+      property: 'Today',
+      checkbox: { equals: true },
+    },
+  })
+})
+
 
 export const getPageContent = cache((pageId:string)=>{
   return notion.blocks.children

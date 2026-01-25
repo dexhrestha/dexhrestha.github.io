@@ -7,7 +7,7 @@ type NewsMetadata = {
 };
 
 export async function getNews(): Promise<NewsMetadata[]> {
-  const news = await getNotionPages(process.env.NOTION_NEWS_DB_ID);
+  const news = await getNotionPages(process.env.NOTION_NEWS_DB_ID!);
 
   return news.results.map((page: any): NewsMetadata => ({
     slug: page.properties.Slug?.rich_text?.[0]?.plain_text ?? "",

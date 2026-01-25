@@ -20,19 +20,16 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
  * @returns A promise that resolves to the markdown string representation of the page
  */
 
-export const getNotionPages = cache(()=> {
-
-return notion.databases.query({
-    filter:{
-      property:"Status",
-      select:{
-        equals:"Published",
-      }
+export const getNotionPages = cache(() => {
+  return notion.databases.query({
+    database_id: process.env.NOTION_DATABASE_ID!,
+    filter: {
+      property: 'Status',
+      select: { equals: 'Published' },
     },
-    database_id: process.env.NOTION_DATABASE_ID
-
   })
-});
+})
+
 
 export const getPageContent = cache((pageId:string)=>{
   return notion.blocks.children

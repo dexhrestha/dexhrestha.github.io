@@ -8,14 +8,14 @@ export async function BlogPosts() {
     <div>
       
       { allBlogs
-        // .sort((a, b) => {
-        //   if (
-        //     new Date(a.properties["Published Date"].date.start) > new Date(b.properties["Published Date"].date.start)
-        //   ) {
-        //     return -1
-        //   }
-        //   return 1
-        // })
+        .sort((a, b) => {
+          if (
+            new Date(a.properties["Published Date"].date.start) > new Date(b.properties["Published Date"].date.start)
+          ) {
+            return -1
+          }
+          return 1
+        })
         .map((post) => (
           <Link
             key={post.id}

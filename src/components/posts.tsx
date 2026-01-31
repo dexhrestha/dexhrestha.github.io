@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { formatDate, getBlogPosts } from '../app/blog/utils'
+export const revalidate = 60;
 
 export async function BlogPosts() {
   const allBlogs = await getBlogPosts();

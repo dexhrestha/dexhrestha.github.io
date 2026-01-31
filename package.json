@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@notion-render/bookmark-plugin": "0.0.2",
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
@@ -20,8 +23,7 @@
     "notion-renderer": "1.0.0-m02",
     "notion-to-md": "^3.1.9",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tailwind": "^4.0.0"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

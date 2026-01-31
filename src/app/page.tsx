@@ -11,7 +11,7 @@ export default function Page() {
       </h1>
       <Quote />
 
-      <Link key="contact" 
+      <Link key="cv" 
             className="text-blue-600 underline hover:text-blue-800 visited:text-purple-600"   
             target="_blank"
             rel="noopener noreferrer"  

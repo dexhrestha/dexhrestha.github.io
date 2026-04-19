@@ -36,6 +36,9 @@ export default function Page() {
           </Link>{' '}
           working on studying time perception and mental simulations.
         </p>
+        <p>
+          My research interests lie in computational and cognitive neuroscience. I am currently seeking PhD opportunities to further explore these interests.
+        </p>
 
       <div className="my-8">
         <News />

@@ -26,7 +26,7 @@ export function Post(props: PostProps) {
 
   return (
 <article className="w-full mb-10 flex flex-col items-start pt-20 px-4 text-left">
-<h1 className="text-6xl font-black text-black mb-8 max-w-4xl">
+<h1 className="text-6xl font-black mb-8 max-w-4xl">
         {title}
       </h1>
 

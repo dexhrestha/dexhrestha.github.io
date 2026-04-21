@@ -21,7 +21,7 @@ export default function Page() {
 
       <Link key="contact" 
             className="text-blue-600 underline hover:text-blue-800 visited:text-purple-600"
-            href="mailto:example@email.com"> Email
+            href="mailto:dipesh.shrestha@unitn.it"> Email
           
       </Link>
 

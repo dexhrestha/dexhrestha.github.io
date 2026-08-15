@@ -35,10 +35,10 @@ export default async function Page() {
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">About me</h1>
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
         <Image
-          src="/images/profile.png"
-          alt="Sample profile portrait"
-          width={160}
-          height={160}
+          src="/images/profile.jpg"
+          alt="Portrait of Dipesh Shrestha"
+          width={220}
+          height={220}
           className="aspect-square shrink-0 rounded-2xl object-cover ring-1 ring-black/10 dark:ring-white/15"
         />
         <div

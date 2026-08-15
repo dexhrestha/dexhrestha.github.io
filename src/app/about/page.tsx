@@ -2,6 +2,7 @@
 import bookmarkPlugin from '@notion-render/bookmark-plugin';
 import { NotionRenderer } from '@notion-render/client';
 import hljsPlugin from '@notion-render/hljs-plugin';
+import Image from 'next/image';
 
 export const revalidate = 60;  
  
@@ -32,13 +33,19 @@ export default async function Page() {
   return (
     <section>
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">About me</h1>
-      {/* <p className="text-base text-gray-700 leading-relaxed mb-4"> */}
-           <div
-        className="text-xl max-w-3xl leading-10 prose prose-neutral"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
- 
-      {/* </p> */}
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+        <Image
+          src="/images/profile.png"
+          alt="Sample profile portrait"
+          width={160}
+          height={160}
+          className="aspect-square shrink-0 rounded-2xl object-cover ring-1 ring-black/10 dark:ring-white/15"
+        />
+        <div
+          className="about-content prose prose-neutral min-w-0 max-w-3xl text-base leading-7"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </div>
     </section>
   )
 }

@@ -121,6 +121,43 @@ html {
   margin-bottom: 1.25em !important;
 }
 
+.about-content > :first-child {
+  margin-top: 0 !important;
+}
+
+.projects-content details[class^='notion-toggle-heading'] {
+  @apply mt-6;
+}
+
+.projects-content details[class^='notion-toggle-heading'] > summary {
+  @apply flex cursor-pointer list-none items-center gap-2;
+}
+
+.projects-content details[class^='notion-toggle-heading'] > summary::-webkit-details-marker {
+  display: none;
+}
+
+.projects-content details[class^='notion-toggle-heading'] > summary::before {
+  width: 0;
+  height: 0;
+  flex: none;
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.45rem solid currentColor;
+  content: '';
+  transition: transform 150ms ease;
+}
+
+.projects-content details[class^='notion-toggle-heading'][open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.projects-content details[class^='notion-toggle-heading'] > summary > h1,
+.projects-content details[class^='notion-toggle-heading'] > summary > h2,
+.projects-content details[class^='notion-toggle-heading'] > summary > h3 {
+  @apply m-0;
+}
+
 pre::-webkit-scrollbar {
   display: none;
 }

@@ -66,7 +66,7 @@ export function Post(props: PostProps) {
 
       {/* Post Content */}
       <div
-        className="text-xl max-w-3xl leading-10 prose prose-neutral"
+        className="prose prose-neutral max-w-3xl text-base leading-7"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </article>

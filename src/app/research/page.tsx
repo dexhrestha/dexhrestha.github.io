@@ -31,7 +31,7 @@ export default async function Page() {
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Research</h1>
       {/* <p className="text-base text-gray-700 leading-relaxed mb-4"> */}
            <div
-        className="text-xl max-w-3xl leading-10 prose prose-neutral"
+        className="prose prose-neutral max-w-3xl text-base leading-7"
         dangerouslySetInnerHTML={{ __html: html }}
       />
  
